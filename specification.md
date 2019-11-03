@@ -88,6 +88,8 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
 
     1. 整理人员必须确认取得的压制成品与压制人员的本地文件一致
     2. 标准版成品必须携带原盘中所有有效内容，移动版只带正片和 NCOP/ED
+    3. 整理人员必须使用成品对照组来检查压制成品，对照组通常只用于检测文件缺漏、音轨与章节错误 \
+        成品对照组可选：[jsum 的 BDRip](https://u2.dmhy.org/userdetails.php?id=29940)
 
 2. 压制成品和字幕检查标准，另见《VCB-Studio 制作规格》
 
@@ -141,7 +143,7 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
         **特殊音轨：DTS Headphone X 转 FLAC，视障音轨按评论轨处理* \
         **对于部分特殊 MKV 移动版本/先行版本，具体情况具体讨论*
 
-        **当收到的音轨出错时，在整理群汇报，联系压制返工。仅当确定参照组的视频与本组成品无偏移且处理正确时，才能使用参照组修正**
+        **当收到的音轨出错时，在整理群汇报，联系压制返工。仅当确定对照组的视频与本组成品无偏移且处理正确时，才能使用对照组修正**
 
     3. 章节
 
@@ -151,7 +153,7 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
 
         **章节文本** 一般为 `Chapter XX`，顺序从 01 开始，也可以是具体意义的内容。对有章节的视频，如果缺少片头章节，应当补齐；如果存在片尾章节，应当移除；位置不正确的章节点，应当修正。章节语言标志根据章节文本内容决定 (例如只有英文则为 en)。如果章节文本使用了任何非 ASCII 字符，应当在 MKVToolNix 封装时为其选择合适的字符集。章节文字不要求还原 BD 菜单，如要手工输入请确保输入正确。常见语言缩写：英文 en，日文 ja，中文 zh。
 
-        **当收到的成品中章节出错时，在整理群汇报，仅当确定参照组的视频与本组成品无偏移且处理正确时，才能使用参照组修正**
+        **当收到的成品中章节出错时，在整理群汇报，仅当确定对照组的视频与本组成品无偏移且处理正确时，才能使用对照组修正**
 
     4. 字幕
 
@@ -284,7 +286,7 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
         1. CD 扫图文件规范见 扫图 部分
         2. 封面图是该 CD 封面或蓝光对应卷的封面，JPG 格式 \
            封面图为播放器播放使用，因此体积不宜超过 1MB，尺寸不宜超过 1000x1000 像素 \
-           请统一命名为 `cover.jpg` \
+           请统一命名为 `Cover.jpg` \
             *允许不带封面图和扫图，但原则上原档有的时候尽量保留
             *若 Hi-Res 资源已内嵌封面图，则不要另外添加封面图文件
 
@@ -301,7 +303,7 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
     音频 | 单碟/多碟整轨: <br> \~/CDs/CD/`CATALOG`.ext <br> 单碟分轨: <br> \~/CDs/CD/`TRNUM`. `TRTITLE`.ext <br> 多碟分轨: <br> \~/CDs/CD/`CATALOG`/`TRNUM`. `TRTITLE`.ext | `CATALOG` 是品番，可以从 VGMDB.NET 或官网找到 <br> `TRNUM` 是编号，`TRTITLE` 是曲名 <br> `TRNUM` 与 `TRTITLE` 之间用 点+空格 分开 <br> foobar2000 命名模板：`%tracknumber%. %title%`
     CUE | ~/CDs/CD/`CATALOG`.cue  | 随对应音频放在同一目录
     LOG | ~/CDs/CD/`CATALOG`.log  | 随对应音频放在同一目录
-    封面 | ~/CDs/`CD`/cover.jpg | 随对应音频放在同一目录 <br> 多个版本时用 1、2 等区分，和音轨对应的优先放置
+    封面 | ~/CDs/`CD`/Cover.jpg | 随对应音频放在同一目录 <br> 多个版本时用 1、2 等区分，和音轨对应的优先放置
     MV Rip | ~/CDs/CD/`CATALOG`.mkv  | 随对应音频放在同一目录 <br> **注意特典碟 `CATALOG` 与 CD 碟不一样**
     扫图 | 唯一版本: \~/CDs/CD/Scans/`PICNUM`.ext <br> 多版本方式一：\~/CDs/CD/Scans/`CATALOG_PICNUM`.ext <br> 多版本方式二: \~/CDs/CD/Scans/`CATALOG`/`PICNUM`.ext | `PIC_NUM` 是图片序号 如 01, 02, 03... <br> 有多版本扫图时，命名可以添加 `CATALOG` 作区分 (用 – 或 _ 作分隔都可以)，也可以以 `CATALOG` 建立子目录 <br> 注意有特典碟的 CD 其 CATALOG 此时形如 SECL-2209~10
 
@@ -323,7 +325,7 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
     `FORMAT` 是 **音频编码格式+扫图格式**，具体见例子 \
     `TITLE` 是专辑名称 \
     `ARTISTS` 是艺术家/歌手 \
-    `DEPTH` = 16bit / 24bit / 32bit … \
+    `DEPTH` = 16bit / 24bit … \
     `FREQ` = 48kHz / 96kHz / 192kHz …
 
     **注意所有的日文括号都使用 `｢｣` 而不再使用全角 `「」`
@@ -343,7 +345,7 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
     2. 美版/意版/英版等其它版本 BD/DVD 扫图可选
     3. 设定集、台本、官方画册可选
     4. CDs 扫图可选，但原则上尽量带
-    5. 原图是 WEBP 和 JPG 以外任何有损格式的，不予收录
+    5. 原图是 WebP 和 JPG 以外任何有损格式的，不予收录
 
 3. 文件规范
 
@@ -405,6 +407,6 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
     4. 种子末端添加版本号，如 `[VCB-Studio] Sword Art Online.v2.torrent`。每次重新制种，版本号+1。
     5. 制作完成的种子务必再使用 Auto Torrent Inspection 检查 tracker 列表正确。
 
-2. 一般情况下通过 度盘/GD 将整理成品传递给复查。如果遇到分享失败的情况，使用 `Hashrenamer` 重新命名并上传。如果遇到特定被彻底拉黑的文件，将该文件加密打包。复查修订后，记得同步修改度盘链接中的文件和种子。\
+2. 一般情况下通过 度盘/GD 将整理成品传递给复查。如果遇到分享失败的情况，使用 `HashRenamer` 重新命名并上传。如果遇到特定被彻底拉黑的文件，将该文件使用 WinRAR 打包并加密文件名，同时带上 5% 的恢复记录。复查修订后，记得同步修改度盘链接中的文件和种子。\
    如果你与复查/总监的网络状况都较好，也可以直接做种传递成品。
 
