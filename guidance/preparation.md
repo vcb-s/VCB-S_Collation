@@ -1,7 +1,3 @@
-# VCB-Studio 整理组操作指导
-
-***
-
 ## 软件准备
 
 1. 找到 Explorer 的 Details 模式
@@ -20,44 +16,3 @@
 8. 安装 [Python 3](https://www.python.org/downloads/release/python-366)（3.6 及以上版本）；从群文件下载 `ToWebp-n-vcbs.py` `DiffChap.py`；从群文件下载 `audio_differ.zip` 解压并编辑 .py 文件中 sox 路径指向解压出来的 `sox.exe`；下载 [Spek](http://spek.cc/) 
 9. 安装 [uTorrent 2.2.1](http://www.oldversion.com/windows/utorrent-2-2-1-build-25302)；下载 [RapidCRC-Unicode](https://github.com/OV2/RapidCRC-Unicode/releases) 
 10. 从 [TautCony](https://tautcony.xyz/tcupdate.html) 下载 `AutoTorrentInspection` 和 `ChapterTool`
-
-***
-
-## 整体流程
-
-***
-
-## 视频检查
-
-***
-
-## 音轨检查
-
-***
-
-## 章节检查
-
-***
-
-## 字幕检查
-
-***
-
-## 音乐收集和整理
-
-***
-
-## 扫图收集和整理
-
-***
-
-## 整体检查
-
-***
-
-## 高级操作
-
-### 进阶搜图
-
-### 封面图制作
-
