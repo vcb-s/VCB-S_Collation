@@ -9,8 +9,8 @@
 7. 音乐收集和整理
 8. 扫图收集和整理
 9. 整体检查
-  - [Mediainfo Project NG 使用指南](mp_ng.md)
-  - [Auto Torrent Inspection 使用指南](ati.md)
+    - [Mediainfo Project NG 使用指南](mp_ng.md)
+    - [Auto Torrent Inspection 使用指南](ati.md)
 10. 高级操作
 11. 进阶搜图
-  - 封面图制作
+    - 封面图制作
