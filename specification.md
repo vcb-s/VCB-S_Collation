@@ -74,12 +74,12 @@
 字幕文件 | 随对应视频放在同一目录 | .ass
 扫图目录 | ~/Scans/ |
 扫图文件 | ~/Scans/xxxx.ext <br> ~/Scans/xxxx/xxxx.ext | 蓝光扫图和其它相关扫图 <br> .webp/jpg
-CD目录 | ~/CDs/ |
-CD专辑 | ~/CDs/`CD`/ |
-CD文件 | ~/CDs/`CD`/xxxx.ext <br> ~/CDs/`CD`/`CATALOG`/xxxx.ext | 音频文件 分轨信息 抓取日志 封面图 <br> .flac/tak/alac .cue .log .jpg/png
-CD特典 | ~/CDs/`CD`/`CATALOG`.ext <br> ~/CDs/`CD`/`CATALOG`/xxxx.ext | 专辑特典视频（罕见） <br> .mkv
-CD扫图目录 | ~/CDs/`CD`/Scans/ |
-CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.ext | 专辑扫图 <br> .webp/jpg
+CD 目录 | ~/CDs/ |
+CD 专辑 | ~/CDs/`CD`/ |
+CD 文件 | ~/CDs/`CD`/xxxx.ext <br> ~/CDs/`CD`/`CATALOG`/xxxx.ext | 音频文件 分轨信息 抓取日志 封面图 <br> .flac/tak/alac .cue .log .jpg/png
+CD 特典 | ~/CDs/`CD`/`CATALOG`.ext <br> ~/CDs/`CD`/`CATALOG`/xxxx.ext | 专辑特典视频（罕见） <br> .mkv
+CD 扫图目录 | ~/CDs/`CD`/Scans/ |
+CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.ext | 专辑扫图 <br> .webp/jpg
 
 ***
 
@@ -106,8 +106,8 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
         视频特性 | 格式和编码
         --- | ---
         标准版本动态视频 | MKV @ [HEVC Ma10p](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Profiles)
-        标准版本静态视频带BGM | MKV @ [AVC Hi444pp](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC#Profiles) 或 [HEVC Ma10p](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Profiles)
-        标准版本静态视频无BGM | PNG
+        标准版本静态视频带 BGM | MKV @ [AVC Hi444pp](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC#Profiles) 或 [HEVC Ma10p](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Profiles)
+        标准版本静态视频无 BGM | PNG
         移动版本动态视频 | MP4 @ [HEVC Ma/Ma10p](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Profiles) or [AVC Hi](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC#Profiles)
 
         **注意拓展名应该与实际容器一致，如 MKV/MKA = Matroska MP4/M4A = MPEG-4
@@ -206,7 +206,7 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
         封有原盘图形字幕的视频不加任何标注
 
         外挂字幕在视频命名的末端加注语言标志，按如下命名： \
-        字幕：[`TAG`] `SEASON` [NUM][`LEVEL`][`FORMAT`].`LANG`.ext \
+        字幕：[`TAG`] `SEASON` [`NUM`][`LEVEL`][`FORMAT`].`LANG`.ext \
         字体：[`TAG`] `SEASON` [Fonts].ext \
         `LANG` = sc, tc, chs, cht, Chs, Cht, Jap, Cht&Jap ...
 
@@ -337,7 +337,7 @@ CD扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.
 1. 相关扫图（Scans）是项目番剧相关的实体商品扫图
 2. 收录规范
 
-    1. 压制源 版本BD/DVD 扫图如有必带
+    1. 压制源 版本 BD/DVD 扫图如有必带
     2. 美版/意版/英版等其它版本 BD/DVD 扫图可选
     3. 设定集、台本、官方画册可选
     4. CDs 扫图可选，但原则上尽量带
