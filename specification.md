@@ -1,8 +1,10 @@
 # VCB-Studio 整理组成品规范
 
-此规范作为通常情况下的准则，但是具体情况请具体讨论并灵活应对，一定不要生搬硬套。遇到需要特别对待的情况或者不太确定好的处理办法，尽管在群里讨论。
-
+此规范作为通常情况下的准则，但是具体情况请具体讨论并灵活应对，一定不要生搬硬套。\
+遇到需要特别对待的情况或者不太确定好的处理办法时，**一定**在群里讨论。\
 遇到不适应具体情况的条目请立即提出修改意见。
+
+[TOC]
 
 ## 总则
 
@@ -14,7 +16,7 @@
     2. 确认自己最近有时间可以接锅，质量优先，但是耗时也不能太久
     3. 在压制已经完工或者即将完工的时候，才能约定/预定任务
 
-3. **整理**: 检查压制成品 -> 收集相关音乐和扫图 -> 组织目录结构和制种 -> 上传整理成品
+3. **整理**: 检查压制成品 -> (可选)收集相关音乐和扫图 -> 组织目录结构和制种 -> 上传整理成品
 
     1. 每个项目的整理环节只由一名整理人员负责
     2. 原则上同一系列的番剧都由同一整理人员负责
@@ -26,6 +28,11 @@
     1. 每个项目番剧的复查环节由项目总监和至少一名整理组复查人员负责
     2. 复查通过时复查人员必须在整理组通知该消息并贴出项目成品的链接
 
+> **自 2021 年 12 月起 VCB-Studio 不再保证收录相关音乐和扫图。**
+> 相关内容由总监、整理、复查本着自愿原则在精力容许范围内寻找和收录。
+> 不再保证不等于摆烂，请相关人员明白每增加完善一份相关资源就可以提高一分成品的质量。
+> 对于任何收录的内容，请依旧遵守本规范要求进行处理。
+
 ***
 
 ## 项目根目录
@@ -35,17 +42,18 @@
     如果项目包括分离的多季，则 `项目根目录` 是一个 `系列主目录`，每季度在其下对应一个 `季度主目录` \
     如果项目包括单季度或分割放送的多期，则 `项目根目录` 是一个 `季度主目录`
 
-    **预料有后续季度时，命名上注意为后续季度留出空间以便日后做合集时减少重命名*
+    * *预料有后续季度时，命名上注意为后续季度留出空间以便日后做合集时减少重命名*
+    * *如果由于`系列主目录`存在导致整体路径过长，可放弃`系列主目录`而将项目视作多个`季度主目录`分开处理并制种*
 
 2. 命名
 
     `系列主目录`：[`TAG`] `SERIES` \
     `季度主目录`：[`TAG`] `SEASON` [`LEVEL`]
 
-    `TAG` 是 **组名**，默认 `VCB-Studio`，有合作组的时候会在 Trello 卡片上标出，用 `&` 将各组连起来，原则上合作组组名前置，具体表示方式请参考 Trello 卡片 \
-    `SERIES` 是 **系列共有名**，罗马音优先，不标 S1+S2+OVA 等季度标识，其后不标注画质级别 \
-    `SEASON` 是 **季度专有名**，罗马音优先，注意官方大小写，不标 S1/S2 等季度标识 \
-    `LEVEL` 是 **编码级别**，如下所示：
+    * `TAG` 是 **组名**，默认 `VCB-Studio`，有合作组的时候会在 Trello 卡片上标出，用 `&` 将各组连起来，原则上合作组组名前置，具体表示方式请参考 Trello 卡片
+    * `SERIES` 是 **系列共有名**，罗马音优先，不标 S1+S2+OVA 等季度标识，其后不标注画质级别
+    * `SEASON` 是 **季度专有名**，罗马音优先，注意官方大小写，不标 S1/S2 等季度标识
+    * `LEVEL` 是 **编码级别**，如下所示：
 
     项目类型| 画质级别
     --- | ---
@@ -53,9 +61,9 @@
     旧标准版 AVC High 10 Profile | Hi10p_1080p, Hi10p_720p …（根据正片分辨率）
     移动版 任何编码 | 1080p, 720p …（根据正片分辨率)
 
-    **名称中避免出现基本拉丁字母和半角符号之外的字符，同时不要出现 `\/:*?"<>|` 中的字符。
-
-    **遇到特殊情况在群里确认**
+    * 名称中避免出现基本拉丁字母和半角符号之外的字符，原则上不要出现 `\/:*?"<>|` 中的字符
+    * 一定需要时存在正斜线 `⁄` 和冒号 `꞉` 两个非常规符号可用于文件名，如要使用请在群内说明
+    * **遇到特殊情况一定在群里确认**
 
 ***
 
@@ -66,19 +74,19 @@
 内容 | 位置| 下属文件
 --- | --- | ---
 正片目录 | ~/|
-正片视频 | ~/xxxx.ext | 视频文件和外挂音轨 .mkv/mka/mp4
-字体包 | ~/xxxx.ext | .zip/rar/7z
+正片视频 | ~/xxxx.ext | 视频文件和外挂音轨 mkv/mka/mp4
+字体包 | ~/xxxx.ext | zip
 特典目录 | ~/SPs/ |
-特典视频 | ~/SPs/xxxx.ext | CM, IV, PV/Trailer, Menu, NCOP/NCED, SP, (Web) Preview
-字幕文件 | 随对应视频放在同一目录 | .ass
+特典视频 | ~/SPs/xxxx.ext | 各种特典 mkv/png <br> Menu, NCOP/ED, CM/SPOT, PV/Teaser/Trailer, (Web) Preview, IV, SP
+字幕文件 | 随对应视频放在同一目录 | ass
 扫图目录 | ~/Scans/ |
-扫图文件 | ~/Scans/xxxx.ext <br> ~/Scans/xxxx/xxxx.ext | 蓝光扫图和其它相关扫图 <br> .webp/jpg
+扫图文件 | ~/Scans/xxxx.ext <br> ~/Scans/xxxx/xxxx.ext | 蓝光扫图和其它相关扫图 webp/jpg
 CD 目录 | ~/CDs/ |
 CD 专辑 | ~/CDs/`CD`/ |
-CD 文件 | ~/CDs/`CD`/xxxx.ext <br> ~/CDs/`CD`/`CATALOG`/xxxx.ext | 音频文件 分轨信息 抓取日志 封面图 <br> .flac/tak/alac .cue .log .jpg/png
-CD 特典 | ~/CDs/`CD`/`CATALOG`.ext <br> ~/CDs/`CD`/`CATALOG`/xxxx.ext | 专辑特典视频（罕见） <br> .mkv
+CD 文件 | ~/CDs/`CD`/xxxx.ext <br> ~/CDs/`CD`/`CATALOG`/xxxx.ext | 音频文件 flac 分轨信息 cue 抓取日志 log 封面图 jpg
+CD 特典 | ~/CDs/`CD`/`CATALOG`.ext <br> ~/CDs/`CD`/`CATALOG`/xxxx.ext | 专辑特典视频（罕见）mkv
 CD 扫图目录 | ~/CDs/`CD`/Scans/ |
-CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.ext | 专辑扫图 <br> .webp/jpg
+CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx.ext | 专辑扫图 webp/jpg
 
 ***
 
@@ -236,74 +244,188 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
 2. 收录规范
 
-    1. 寻找所有找到的与番剧相关的 CD，这包括上面提到的所有内容 \
-        **找不到某张的放流时尽管在整理群提出询问，会有大佬帮你找*
-    2. 所有收录的 CD，整理完成时必须说明资源出处（在群里说一下或者带个文本）
-    3. 具有多版本的 CD（Hi-Res/通常盘/动画盘/期限盘/初回盘/限定AB …），去冗规则:
+    1. 尝试寻找所有找到的与番剧相关的 CD，这包括上面提到的所有内容
 
-        1. 最高质量的 Hi-Res 版本无论如何都保留；
-        2. 某一版本有其它版本都没有的曲目时，保留这个版本，否则移除 \
-            **将被移除的版本的扫图合并至保留了的版本* \
-            **不要挑取某版本 HR/CD 中部分曲目来补齐其它版本 HR/CD 未发行或未完全放流的曲目*
-            **Hi-Res 覆盖 CD 版本全部曲目时，最好删除 CD 版本来节约体积，但也可以保留
+        **找不到某张的放流时尽管在整理群提出询问，会有大佬帮你找*
+
+    2. 所有收录的 CD，收录时必须记录资源出处
+
+    3. 具有多版本的 CD（Hi-Res/通常盘/动画盘/期限盘/初回盘/限定AB…），去冗规则:
+
+        a. 最高质量的 Hi-Res 版本无论如何都保留；
+        b. 某一版本有其它版本都没有的曲目时，保留这个版本，否则移除
+
+          * 将被移除的版本的扫图合并至保留了的版本
+          * 不要挑取某版本 HR/CD 中部分曲目来补齐其它版本 HR/CD 未发行或未完全放流的曲目
+          * Hi-Res 覆盖 CD 版本全部曲目时，最好删除 CD 版本来节约体积，但也可以保留
 
     4. 不收录的情况或内容:
 
-        1. 有损编码 (除非仅存有损发行可收 mora/iTunes AAC 和 Web MP3 配信)
-        2. 禁止转载 或 保持原样/禁止重编码转载
-        3. 假冒无损 (=无损格式承载有损音频内容的文件)
-        4. 非完整专辑 (=不收没买全的 Hi-Res 或不完整的放流)
-        5. 另一季度或剧场版的音乐 (=不跨季收录)
-        6. 歌手个人专辑 (除非主题歌仅存于个人专辑)
-        7. 衍生游戏、真人影剧、漫画特典、杂志特典、同人创作的 CD (=降低体积)
-        8. 以 PDM 编码的 DSD 等格式的专辑
-        9. 32bit Hi-Res 音频资源
+        1. 禁止转载 或 **保持原样** 或 **禁止重编码转载**
+        2. 非完整专辑 (不收录没买全的 Hi-Res 或不完整的放流)
+        3. 有损编码 (不含只存在有损发行的情况，来源如 mora/iTunes AAC 和 Web/CD MP3)
+        4. 从有损编码（MP3/AAC/OPUS 等) 转码为的无损编码 (FLAC/ALAC/TAK 等) 的专辑 (假冒无损)
+        5. 从 SACD/Hi-Res 降采样转码得到的 CD/Hi-Res 规格专辑
+        6. SACD 和 32-bit Hi-Res 音频资源
+        7. 歌手个人专辑 (不含主题歌仅存于个人专辑的情况)
+        8. 同系列但属于另一季度或剧场版的音乐 (不跨季收录)
+        9. 衍生游戏、真人影剧、漫画特典、杂志特典、同人创作的 CD (降低体积)
 
-        **当遇到 未授权禁转 时，允许联系放流者取得授权，但必须约定好以下形式中的一种，并在资源出处中说明：*
+    5. 转载规范：
 
-        1. *允许 VCB-Studio 转载且发布时标注来源，并注明禁止第三方将专辑拆离 BDRip 再行转载*
-        2. *允许 VCB-Studio 转载且发布时标注来源，并注明第三方再行转载时必须注明原始来源*
-        3. *允许 VCB-Studio 转载且发布时标注来源，但对第三方转载不做限制*
+        1. (通用规则) 当找到任何专辑放流，首先根据该平台和该放流者的转载要求执行。如没有任何说明，视作可以直接转载。如遇到类似于*未授权禁转*时，可以联系放流者转载授权 (不强求)，但需要与放流者约定好转载规则，具体包括以下两点：
+
+            a. 来源标注：
+
+              * 在种子发布页注明来源和放流者ID，且在种子内添加`转载声明` (也是TSDM默认)
+              * 在种子发布页注明来源和放流者ID，不在种子内添加标注 (默认)
+              * 不进行任何标注
+
+            b. 第三方转载限制：
+
+              * 禁止第三方将专辑拆离 BDRip 再行转载 (也是TSDM默认)
+              * 允许第三放转载，再行转载时必须注明原始来源 (默认)
+              * 允许第三方转载，且不做任何限制
+
+        2. (TSDM单独规则部分) 转载来自 [TSDM论坛](https://www.tsdm39.net/forum.php?gid=451) 的专辑，根据我们已达成的转载协议执行，具体如下：
+
+            a. TSDM 放流的专辑，包括[合购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=503)和[首发偷跑区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=356)，默认允许转载。转载时需要在对应 `CD` 目录下增加`TSDM论坛放流转载声明`。
+
+            b. 个人在 TSDM 放流的专辑，包括[自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=417)和[Hi-Res自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=419):
+
+              * 如放流者如自订转载规则，按其规则执行。
+              * 如放流者未指定转载规则，转载时在对应`CD`目录下增加`TSDM个人放流转载声明`。
 
 3. 文件规范
 
     1. 音频文件
 
-        1. 允许的无损编码：FLAC；有损编码：MP3 和 AAC(.M4A) \
-            *其它无损格式如 WAV 均转码为 FLAC
-        2. FLAC 一律使用最高等级压缩率 (Level 8) 重编码一次，即使已充分压缩
-        3. 注意验证文件完整性
+        1. 允许的无损编码：FLAC；
+           有损编码：MP3 和 AAC(.M4A)
 
-    2. CUE 文件 (当且仅当专辑是整轨形式)
+            * 其它无损格式如 WAV 均转码为 FLAC
+            * FLAC 一律使用最高压缩等级 (Level 8) 重编码一次 (可以确认文件完整性)
 
-        1. 以 UTF-8 BOM 编码
-        2. CUE 的 FILE 行正确指向同目录下的音频文件
-        3. 不出现乱码或编程语法错误，曲目信息和分轨时间点确保正确
+    2. CUE 文件 (仅当专辑是整轨形式)
 
-    3. LOG 文件（即 EAC 产生的抓取报告，原档如有则必带，但当且仅当物理专辑）
-    4. 可选文件 (扫图 / 封面):
+        * 以 UTF-8 BOM 编码
+        * CUE 的 FILE 行正确指向同目录下的音频文件
+        * 不出现乱码或编程语法错误，曲目信息和分轨时间点确保正确
 
-        1. CD 扫图文件规范见 扫图 部分
-        2. 封面图是该 CD 封面或蓝光对应卷的封面，JPG 格式 \
-           封面图为播放器播放使用，因此体积不宜超过 1MB，尺寸不宜超过 1000x1000 像素 \
-           请统一命名为 `Cover.jpg` \
-            *允许不带封面图和扫图，但原则上原档有的时候尽量保留
-            *若 Hi-Res 资源已内嵌封面图，则不要另外添加封面图文件
+    3. EAC/XLD 抓轨 LOG 文件（即抓碟报告，原档如有则必带，仅适用于物理专辑)
 
-    5. CD 的特典 MV BDRip/DVDRip (当且仅当压了的时候)
-    6. 禁止携带的文件，包括且不限于：\
-        文件校验信息；专辑信息文本；其它抓碟文件；放流者的问候；CD 的特典 BD/DVD 原盘
+    4. 转载声明文本，仅当放流源要求时携带，分为三种：
+
+       a. 通用`转载声明`模板，适用于转载 TSDM 之外资源的情况：
+
+         * 文件名：
+           * `{放流者}@{放流平台}.txt` (默认) 如 `Amefs@U2.txt`
+           * `{放流平台}@{放流者}.txt` 如 `U2@dennis1011.txt`
+           * `{放流者}.txt` 如 `七条天空.txt`
+
+         * 文件内容：(编码 UTF-8 BOM)
+
+           ```txt
+           {原贴链接}
+           ```
+
+           如
+
+           ```txt
+           https://u2.dmhy.org/details.php?id=46496&hit=1
+           ```
+
+       b. `TSDM论坛放流转载声明`模板，适用于 TSDM 放流的专辑，包括[合购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=503)和[首发偷跑区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=356)：
+
+         * 文件名：
+
+           * `天使动漫自购转载声明.txt`
+
+         * 文件内容：(编码 UTF-8 BOM)
+
+           ```txt
+           天使动漫授权 VCB-Studio 转载声明
+           TSDM's authorization of redistribution for VCB-Studio
+
+           本音乐仅供 VCB-Studio 发布使用，请勿单独转载。本文件由放流者要求加入，转载时请原样保留。
+           The music files here are for VCB-Studio's release only. Please do not re-post them separately. The source provider requires this file to be included as is when re-posting the BDRip release.
+
+           动漫音乐微博，最新自购无损音乐更新情况：
+           TSDM's Weibo with latest information of self-purchased lossless music:
+           https://weibo.com/dmmusic
+           https://weibo.com/acgtsdm
+
+           天使动漫自购音乐区链接：
+           Link to TSDM's self-purchased music forum:
+           https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=247
+
+           自购支援规则（无损音质 + BK 扫图，新老 CD 皆可）：
+           Rules of joining self-purchased music forum:
+           https://www.tsdm39.net/forum.php?mod=viewthread&tid=841501
+           ```
+
+       c. `TSDM个人放流转载声明`模板，适用于个人在 TSDM 放流的专辑，包括[自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=417)和[Hi-Res自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=419)：
+
+         * 文件名：
+
+           * `天使动漫@{会员ID}.txt` 如 `天使动漫@小岩井吉乃.txt`
+
+         * 文件内容：(编码 UTF-8 BOM，**最后一行源链接可选**）
+
+           ```txt
+           天使动漫授权 VCB-Studio 转载声明
+           TSDM's authorization of redistribution for VCB-Studio
+
+           本音乐仅供 VCB-Studio 发布使用，请勿单独转载。本文件由放流者要求加入，转载时请原样保留。
+           The music files here are for VCB-Studio's release only. Please do not re-post them separately. The source provider requires this file to be included as is when re-posting the BDRip release.
+
+           动漫音乐微博，最新自购无损音乐更新情况：
+           TSDM's Weibo with latest information of self-purchased lossless music:
+           https://weibo.com/dmmusic
+           https://weibo.com/acgtsdm
+
+           天使动漫自购音乐区链接：
+           Link to TSDM's self-purchased music forum:
+           https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=247
+
+           自购支援规则（无损音质 + BK 扫图，新老 CD 皆可）：
+           Rules of joining self-purchased music forum:
+           https://www.tsdm39.net/forum.php?mod=viewthread&tid=841501
+
+           [原帖链接：{原帖URL}]
+           ```
+
+    5. 可选文件 (封面 / 扫图):
+
+        1. 封面图是该 CD 封面或蓝光对应卷的封面
+            * 一律采用 JPG 格式，体积不宜超过 1MB，尺寸不宜超过 1600x1600 像素
+            * 文件名统一使用 `Cover.jpg`
+            * 若 Hi-Res 资源已内嵌封面图，则不要另外添加封面图文件
+            * 允许不带封面图和扫图，但原则上尽量保留
+
+        2. CD 扫图文件规范见 扫图 部分
+
+    6. CD 的特典 MV BDRip/DVDRip (仅当压了的时候)
+
+    7. 禁止携带的文件，包括且不限于:
+
+        * CD 的特典 BD/DVD 原盘
+        * 文件校验信息，如 *.accuraterip
+        * 专辑信息文本，包括歌词
+        * 其它抓碟文件
+        * 放流者的问候
 
 4. 目录结构
 
     内容 | 位置和命名 | 命名规则和补充说明
     --- | --- | ---
     主目录 | \~/**CDs** | 就算只有一张 CD 也叫做 CDs
-    专辑 | ~/CDs/`CD` | `CD` 是专辑名，命名规范见下 <br> **同一 CD 的所有 CD 音质版本都放在同一专辑目录** <br> **Hi-Res 版本单独建立文件夹**
+    专辑 | ~/CDs/`CD` | `CD` 是专辑名，命名规范见下一小节 <br> **同一专辑 CD 音质的所有版本都放在同一专辑目录** <br> **Hi-Res 版本单独建立文件夹**
     音频 | 单碟/多碟整轨: <br> \~/CDs/CD/`CATALOG`.ext <br> 单碟分轨: <br> \~/CDs/CD/`TRNUM`. `TRTITLE`.ext <br> 多碟分轨: <br> \~/CDs/CD/`CATALOG`/`TRNUM`. `TRTITLE`.ext | `CATALOG` 是品番，可以从 VGMDB.NET 或官网找到 <br> `TRNUM` 是编号，`TRTITLE` 是曲名 <br> `TRNUM` 与 `TRTITLE` 之间用 点+空格 分开 <br> foobar2000 命名模板：`%tracknumber%. %title%`
     CUE | ~/CDs/CD/`CATALOG`.cue  | 随对应音频放在同一目录
     LOG | ~/CDs/CD/`CATALOG`.log  | 随对应音频放在同一目录
-    封面 | ~/CDs/`CD`/Cover.jpg | 随对应音频放在同一目录 <br> 多个版本时用 1、2 等区分，和音轨对应的优先放置
+    转载声明 | ~/CDs/CD/`转载声明`.txt | 随对应音频放在同一目录 文件名规范见上一节
+    封面 | ~/CDs/`CD`/Cover.jpg | 随对应音频放在同一目录 <br> 多个版本时留一个即可
     MV Rip | ~/CDs/CD/`CATALOG`.mkv  | 随对应音频放在同一目录 <br> **注意特典碟 `CATALOG` 与 CD 碟不一样**
     扫图 | 唯一版本: \~/CDs/CD/Scans/`PICNUM`.ext <br> 多版本方式一：\~/CDs/CD/Scans/`CATALOG_PICNUM`.ext <br> 多版本方式二: \~/CDs/CD/Scans/`CATALOG`/`PICNUM`.ext | `PIC_NUM` 是图片序号 如 01, 02, 03... <br> 有多版本扫图时，命名可以添加 `CATALOG` 作区分 (用 – 或 _ 作分隔都可以)，也可以以 `CATALOG` 建立子目录 <br> 注意有特典碟的 CD 其 CATALOG 此时形如 SECL-2209~10
 
@@ -328,11 +450,11 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
     `DEPTH` = 16bit / 24bit … \
     `FREQ` = 48kHz / 96kHz / 192kHz …
 
-    **注意所有的日文括号都使用 `｢｣` 而不再使用全角 `「」`
-    **所有专辑都可以不写歌手* \
-    **如果 ARTISTS 太多即 VA，一律不写* \
-    **角色歌时只写角色名即可，不用写 CV，或者直接不写* \
-    **命名中注意空格的地方*
+    * 注意所有的日文括号都使用 `｢｣` 而不再使用全角 `「」`
+    * 所有专辑都可以不写歌手
+    * 如果 `ARTISTS` 太多即 Various Artists/VA，一律不写
+    * 角色歌时只写角色名即可，不用写 CV，或者直接不写
+    * 命名中注意空格的地方
 
 ***
 
@@ -409,4 +531,3 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
 2. 一般情况下通过 度盘/GD 将整理成品传递给复查。如果遇到分享失败的情况，使用 `HashRenamer` 重新命名并上传。如果遇到特定被彻底拉黑的文件，将该文件使用 WinRAR 打包并加密文件名，同时带上 5% 的恢复记录。复查修订后，记得同步修改度盘链接中的文件和种子。\
    如果你与复查/总监的网络状况都较好，也可以直接做种传递成品。
-
