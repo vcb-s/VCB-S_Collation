@@ -18,7 +18,7 @@
 
     1. 每个项目的整理环节只由一名整理人员负责
     2. 原则上同一系列的番剧都由同一整理人员负责
-    3. 整理完成时整理人员必须在整理组通知该消息并贴出 ATI 和 MP 截图
+    3. 整理完成时整理人员必须在整理组通知该消息并在度盘分享链接中附上 ATI 和 MP 截图
     4. `整理成品` 是按照规范进行组织的视频音乐扫图合集
 
 4. **复查**: 检查整理成品 -> 指导错误修正 -> 确认项目成品
@@ -42,7 +42,7 @@
     `系列主目录`：[`TAG`] `SERIES` \
     `季度主目录`：[`TAG`] `SEASON` [`LEVEL`]
 
-    `TAG` 是 **组名**，默认 `VCB-Studio`，有合作组的时候提前在群里确认，用 `&` 将各组连起来 \
+    `TAG` 是 **组名**，默认 `VCB-Studio`，有合作组的时候会在 Trello 卡片上标出，用 `&` 将各组连起来，原则上合作组组名前置，具体表示方式请参考 Trello 卡片 \
     `SERIES` 是 **系列共有名**，罗马音优先，不标 S1+S2+OVA 等季度标识，其后不标注画质级别 \
     `SEASON` 是 **季度专有名**，罗马音优先，注意官方大小写，不标 S1/S2 等季度标识 \
     `LEVEL` 是 **编码级别**，如下所示：
@@ -53,8 +53,7 @@
     旧标准版 AVC High 10 Profile | Hi10p_1080p, Hi10p_720p …（根据正片分辨率）
     移动版 任何编码 | 1080p, 720p …（根据正片分辨率)
 
-    **需要在名称里使用正斜线的请使用：`⁄` 注意这个符号一般情况下需要左右各配一个空格* \
-    **需要在名称里使用冒号的请使用：`꞉`*
+    **名称中避免出现基本拉丁字母和半角符号之外的字符，同时不要出现 `\/:*?"<>|` 中的字符。
 
     **遇到特殊情况在群里确认**
 
@@ -89,19 +88,19 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
     1. 整理人员必须确认取得的压制成品与压制人员的本地文件一致
     2. 标准版成品必须携带原盘中所有有效内容，移动版只带正片和 NCOP/ED
-    3. 整理人员必须使用成品对照组来检查压制成品 \
-        成品对照组可选：[jsum 的 BDRip](https://u2.dmhy.org/userdetails.php?id=29940) 或 BD/DVD 原盘
+    3. 整理人员必须使用成品对照组来检查压制成品，对照组通常只用于检测文件缺漏、音轨与章节错误 \
+        成品对照组可选：[jsum 的 BDRip](https://u2.dmhy.org/userdetails.php?id=29940)
 
 2. 压制成品和字幕检查标准，另见《VCB-Studio 制作规格》
 
     1. 视频
 
         内容：视频的内容和原盘一致，没有画面瑕疵，时长和原盘相等 或 帧率一样时总帧数相同。 \
-        帧率：逐行扫描；原盘隔行扫描的视频，压制成品应正确地反交错并有正确的帧率，画面没有反交错出错瑕疵。常见帧率有 CFR 23.976 (24000/1001) 29.997 (30000/1001) 59.994 (60000/1001) FPS。 \
+        帧率：逐行扫描；原盘隔行扫描的视频，压制成品应正确地反交错并有正确的帧率，画面没有反交错出错瑕疵。常见帧率有 CFR 23.976 (24000/1001) 29.997 (30000/1001) 59.994 (60000/1001) FPS。MP 可以根据帧率将其以不同颜色表示。 \
         分辨率：除非 黑边切割 或 降采样 (低原生分辨率的 BD 降分辨率制作 / 移动版本采取低分辨率) 或 升采样 (480p/576p 的 DVD 做成 720p) 时，否则成品分辨率应和原盘一致。 \
         其它：保留有完整的编码参数信息，色彩矩阵参数 (BT601/709/2020)。
 
-        **Mediainfo 检测到 23.976 (23976/1000) 或 (24000/1001) 都是正确的*
+        **若视频长度小于 30 秒且 Mediainfo 检测到 23.976 (23976/1000) 等分母为 1000 的帧率，可以视为正确*
 
         视频特性 | 格式和编码
         --- | ---
@@ -110,7 +109,7 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
         标准版本静态视频无 BGM | PNG
         移动版本动态视频 | MP4 @ [HEVC Ma/Ma10p](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Profiles) or [AVC Hi](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC#Profiles)
 
-        **注意拓展名应该与实际容器一致，如 MKV/MKA = Matroska MP4/M4A = MPEG-4
+        **注意拓展名应该与实际容器一致，如 MKV/MKA = Matroska MP4/M4A = MPEG-4。MP 可以检测出此拓展名和实际格式不符的问题，并标以<span style="background: red">红色底色</span>。
 
         **当收到的视频不符合以上标准时，在整理群汇报，等待压制修正**
 
@@ -140,11 +139,11 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
         其它 | --- | 丢弃
 
         **同一视频的所有外挂音轨均封装在同一个 MKA 文件里，注意保持一致的轨道顺序* \
-        **片源只有有损主音轨的时候原样内封* \
-        **特殊音轨：DTS Headphone X 转 FLAC，视障音轨按评论轨处理* \
+        **片源只有有损主音轨或 >2.0CH 无损主音轨的时候同样内封* \
+        **特殊音轨：DTS Headphone X 转 FLAC，视障音轨规格按主音轨处理* \
         **对于部分特殊 MKV 移动版本/先行版本，具体情况具体讨论*
 
-        **当收到的音轨出错时，在整理群汇报，联系压制返工或使用参照组修正**
+        **当收到的音轨出错时，在整理群汇报，联系压制返工。仅当确定对照组的视频与本组成品无偏移且处理正确时，才能使用对照组修正**
 
     3. 章节
 
@@ -152,16 +151,16 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
         任何存在有意义章节的特典视频需要带有章节 (所有 CM/PV 集，多数 IV，许多 SP) \
         章节文件均内封于 MKV/MP4 文件
 
-        **章节文本** 一般为 `Chapter XX`，顺序从 01 开始，也可以是具体意义的内容。对有章节的视频，如果缺少片头章节，应当补齐；如果存在片尾章节，应当移除；位置不正确的章节点，应当修正。章节语言标志根据章节文本内容决定 (例如只有英文则为 en)。如果章节文本使用了任何非 ASCII 字符，应当在 MKVToolNix 封装时为其选择合适的字符集。
+        **章节文本** 一般为 `Chapter XX`，顺序从 01 开始，也可以是具体意义的内容。对有章节的视频，如果缺少片头章节，应当补齐；如果存在片尾章节，应当移除；位置不正确的章节点，应当修正。章节语言标志根据章节文本内容决定 (例如只有英文则为 en)。如果章节文本使用了任何非 ASCII 字符，应当在 MKVToolNix 封装时为其选择合适的字符集。章节文字不要求还原 BD 菜单，如要手工输入请确保输入正确。常见语言缩写：英文 en，日文 ja，中文 zh。
 
-        **当收到的成品中章节出错时，在整理群汇报，根据参照组自行修正**
+        **当收到的成品中章节出错时，在整理群汇报，仅当确定对照组的视频与本组成品无偏移且处理正确时，才能使用对照组修正**
 
     4. 字幕
 
         原盘字幕：如有必带，内封于对应的 MKV 文件，MP4 带不了。 \
         合作字幕：标准版本，外挂 ASS 且带有字体包；移动版本，硬嵌。 \
         原则上尽量避免须使用 VSFilterMod 才能正确显示的特效字幕，并使用 ATI 检查字幕是否带有此类特效。 \
-        字体包应带且仅带有合作字幕中所包含的所有字体。
+        字体包应带且仅带有合作字幕中所包含的所有字体。字体包推荐使用兼容性较好 zip 压缩，压缩时请使用 WinRAR。
 
         **当收到的合作组字幕出错时，在整理群汇报，等待字幕组修正**
 
@@ -208,7 +207,8 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
         外挂字幕在视频命名的末端加注语言标志，按如下命名： \
         字幕：[`TAG`] `SEASON` [`NUM`][`LEVEL`][`FORMAT`].`LANG`.ext \
         字体：[`TAG`] `SEASON` [Fonts].ext \
-        `LANG` = sc, tc, chs, cht, Chs, Cht, Jap, Cht&Jap ...
+        `LANG` = sc, tc, chs, cht ... 不接受 gb, big5 \
+        请优先使用字幕组的表述方式
 
         硬嵌字幕的视频，在文件名最后加标注: \
         视频：[`TAG`] `SEASON` [`NUM`][`LEVEL`][`FORMAT`][`LANG`].ext \
@@ -224,11 +224,11 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
     内容 | 英文 | 日文
     --- | --- | ---
-    片头曲 | Opening | オープニングテーマ
-    片尾曲 | Ending | エンディングテーマ
-    歌集 | Song Collection | ソングコレクション
-    角色歌 | Character (Image) Song | キャラクターイメージソング
-    原声音乐 | (Original) Soundtrack | オリジナルサウンドトラック
+    片头曲 | Opening | オープニング テーマ
+    片尾曲 | Ending | エンディング テーマ
+    歌集 | Song Collection | ソング コレクション
+    角色歌 | Character (Image) Song | キャラクター イメージソング
+    原声音乐 | (Original) Soundtrack | オリジナル サウンドトラック
     声剧 | (Original) (Audio) Drama | ドラマ
     广播 | Radio | ラジオ
 
@@ -257,6 +257,7 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
         6. 歌手个人专辑 (除非主题歌仅存于个人专辑)
         7. 衍生游戏、真人影剧、漫画特典、杂志特典、同人创作的 CD (=降低体积)
         8. 以 PDM 编码的 DSD 等格式的专辑
+        9. 32bit Hi-Res 音频资源
 
         **当遇到 未授权禁转 时，允许联系放流者取得授权，但必须约定好以下形式中的一种，并在资源出处中说明：*
 
@@ -268,8 +269,8 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
     1. 音频文件
 
-        1. 允许的无损编码：FLAC > ALAC(.M4A) > TAK；有损编码：MP3 和 AAC(.M4A) \
-            *其它无损格式如 WAV 均转码为 FLAC，遇到 32-bit 的情况在整理群提出
+        1. 允许的无损编码：FLAC；有损编码：MP3 和 AAC(.M4A) \
+            *其它无损格式如 WAV 均转码为 FLAC
         2. FLAC 一律使用最高等级压缩率 (Level 8) 重编码一次，即使已充分压缩
         3. 注意验证文件完整性
 
@@ -283,8 +284,11 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
     4. 可选文件 (扫图 / 封面):
 
         1. CD 扫图文件规范见 扫图 部分
-        2. 封面图是该 CD 封面或蓝光对应卷的封面，JPG/PNG 格式，一般体积不要过大但不设限制
+        2. 封面图是该 CD 封面或蓝光对应卷的封面，JPG 格式 \
+           封面图为播放器播放使用，因此体积不宜超过 1MB，尺寸不宜超过 1000x1000 像素 \
+           请统一命名为 `Cover.jpg` \
             *允许不带封面图和扫图，但原则上原档有的时候尽量保留
+            *若 Hi-Res 资源已内嵌封面图，则不要另外添加封面图文件
 
     5. CD 的特典 MV BDRip/DVDRip (当且仅当压了的时候)
     6. 禁止携带的文件，包括且不限于：\
@@ -299,7 +303,7 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
     音频 | 单碟/多碟整轨: <br> \~/CDs/CD/`CATALOG`.ext <br> 单碟分轨: <br> \~/CDs/CD/`TRNUM`. `TRTITLE`.ext <br> 多碟分轨: <br> \~/CDs/CD/`CATALOG`/`TRNUM`. `TRTITLE`.ext | `CATALOG` 是品番，可以从 VGMDB.NET 或官网找到 <br> `TRNUM` 是编号，`TRTITLE` 是曲名 <br> `TRNUM` 与 `TRTITLE` 之间用 点+空格 分开 <br> foobar2000 命名模板：`%tracknumber%. %title%`
     CUE | ~/CDs/CD/`CATALOG`.cue  | 随对应音频放在同一目录
     LOG | ~/CDs/CD/`CATALOG`.log  | 随对应音频放在同一目录
-    封面 | ~/CDs/CD/`CATALOG`.jpg/png <br> ~/CDs/`CD`/Cover.jpg/png | 随对应音频放在同一目录 <br> 最好用 `CATALOG` 但 Cover/cover/cover01 等均可
+    封面 | ~/CDs/`CD`/Cover.jpg | 随对应音频放在同一目录 <br> 多个版本时用 1、2 等区分，和音轨对应的优先放置
     MV Rip | ~/CDs/CD/`CATALOG`.mkv  | 随对应音频放在同一目录 <br> **注意特典碟 `CATALOG` 与 CD 碟不一样**
     扫图 | 唯一版本: \~/CDs/CD/Scans/`PICNUM`.ext <br> 多版本方式一：\~/CDs/CD/Scans/`CATALOG_PICNUM`.ext <br> 多版本方式二: \~/CDs/CD/Scans/`CATALOG`/`PICNUM`.ext | `PIC_NUM` 是图片序号 如 01, 02, 03... <br> 有多版本扫图时，命名可以添加 `CATALOG` 作区分 (用 – 或 _ 作分隔都可以)，也可以以 `CATALOG` 建立子目录 <br> 注意有特典碟的 CD 其 CATALOG 此时形如 SECL-2209~10
 
@@ -321,7 +325,7 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
     `FORMAT` 是 **音频编码格式+扫图格式**，具体见例子 \
     `TITLE` 是专辑名称 \
     `ARTISTS` 是艺术家/歌手 \
-    `DEPTH` = 16bit / 24bit / 32bit … \
+    `DEPTH` = 16bit / 24bit … \
     `FREQ` = 48kHz / 96kHz / 192kHz …
 
     **注意所有的日文括号都使用 `｢｣` 而不再使用全角 `「」`
@@ -341,7 +345,7 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
     2. 美版/意版/英版等其它版本 BD/DVD 扫图可选
     3. 设定集、台本、官方画册可选
     4. CDs 扫图可选，但原则上尽量带
-    5. 原图是 WEBP 和 JPG 以外任何有损格式的，不予收录
+    5. 原图是 WebP 和 JPG 以外任何有损格式的，不予收录
 
 3. 文件规范
 
@@ -403,6 +407,6 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
     4. 种子末端添加版本号，如 `[VCB-Studio] Sword Art Online.v2.torrent`。每次重新制种，版本号+1。
     5. 制作完成的种子务必再使用 Auto Torrent Inspection 检查 tracker 列表正确。
 
-2. 一般情况下通过 度盘/GD 将整理成品传递给复查。如果遇到分享失败的情况，使用 `Hashrenamer` 重新命名并上传。如果遇到特定被彻底拉黑的文件，将该文件加密打包。复查修订后，记得同步修改度盘链接中的文件和种子。\
+2. 一般情况下通过 度盘/GD 将整理成品传递给复查。如果遇到分享失败的情况，使用 `HashRenamer` 重新命名并上传。如果遇到特定被彻底拉黑的文件，将该文件使用 WinRAR 打包并加密文件名，同时带上 5% 的恢复记录。复查修订后，记得同步修改度盘链接中的文件和种子。\
    如果你与复查/总监的网络状况都较好，也可以直接做种传递成品。
 
