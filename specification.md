@@ -75,7 +75,7 @@
 --- | --- | ---
 正片目录 | ~/|
 正片视频 | ~/xxxx.ext | 视频文件和外挂音轨 mkv/mka/mp4
-字体包 | ~/xxxx.ext | zip
+字体包 | ~/xxxx.ext | 7z/zip
 特典目录 | ~/SPs/ |
 特典视频 | ~/SPs/xxxx.ext | 各种特典 mkv/png <br> Menu, NCOP/ED, CM/SPOT, PV/Teaser/Trailer, (Web) Preview, IV, SP
 字幕文件 | 随对应视频放在同一目录 | ass
@@ -165,10 +165,11 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
     4. 字幕
 
-        原盘字幕：如有必带，内封于对应的 MKV 文件，MP4 带不了。 \
-        合作字幕：标准版本，外挂 ASS 且带有字体包；移动版本，硬嵌。 \
-        原则上尽量避免须使用 VSFilterMod 才能正确显示的特效字幕，并使用 ATI 检查字幕是否带有此类特效。 \
-        字体包应带且仅带有合作字幕中所包含的所有字体。字体包推荐使用兼容性较好 zip 压缩，压缩时请使用 WinRAR。
+        * 原盘图形字幕 (PGS): 如有必带，内封于对应的 MKV 文件 (MP4 带不了)。
+        * 合作字幕: 标准版本，外挂 ASS 且带有字体包；移动版本，硬嵌。
+          * 原则上尽量避免使用 VSFilterMod 才能正确显示的特效字幕 (ATI 可以检查字幕是否带有此类特效)。
+          * 字体包应带且仅带有合作字幕中所包含的所有字体，并打包为压缩包。
+            * 字体包优先使用 7z 格式；如果使用 zip 格式，最好避免使用 WinRAR 压缩；不使用 rar4/5 格式。
 
         **当收到的合作组字幕出错时，在整理群汇报，等待字幕组修正**
 
@@ -252,32 +253,51 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
     3. 具有多版本的 CD（Hi-Res/通常盘/动画盘/期限盘/初回盘/限定AB…），去冗规则:
 
-        a. 最高质量的 Hi-Res 版本无论如何都保留；
+        a. 最高质量的 Hi-Res 版本无论如何都保留
+
+          * 本处 *最高质量的 Hi-Res* 指最高 24-bit 192kHz 的常规 PCM Hi-Res 音频
+          * 32-bit 或 384-kHz 的 PCM Hi-Res 只在找不到其它任何放流时收录
+
         b. 某一版本有其它版本都没有的曲目时，保留这个版本，否则移除
 
           * 将被移除的版本的扫图合并至保留了的版本
           * 不要挑取某版本 HR/CD 中部分曲目来补齐其它版本 HR/CD 未发行或未完全放流的曲目
           * Hi-Res 覆盖 CD 版本全部曲目时，最好删除 CD 版本来节约体积，但也可以保留
 
-    4. 不收录的情况或内容:
+    4. 不收录符合以下任何一个条件的专辑放流:
 
-        1. 禁止转载 或 **保持原样** 或 **禁止重编码转载**
-        2. 非完整专辑 (不收录没买全的 Hi-Res 或不完整的放流)
-        3. 有损编码 (不含只存在有损发行的情况，来源如 mora/iTunes AAC 和 Web/CD MP3)
-        4. 从有损编码（MP3/AAC/OPUS 等) 转码为的无损编码 (FLAC/ALAC/TAK 等) 的专辑 (假冒无损)
-        5. 从 SACD/Hi-Res 降采样转码得到的 CD/Hi-Res 规格专辑
-        6. SACD 和 32-bit Hi-Res 音频资源
-        7. 歌手个人专辑 (不含主题歌仅存于个人专辑的情况)
-        8. 同系列但属于另一季度或剧场版的音乐 (不跨季收录)
-        9. 衍生游戏、真人影剧、漫画特典、杂志特典、同人创作的 CD (降低体积)
+        a. 禁止转载
+        b. 转载要求中存在任何与本规范产生冲突的描述，如：
+
+          * *保持原样*：不得改变目录名文件名、目录结构、删除任何附带文件、重订元数据等
+          * *禁止重编码转载*：不得重新编码不兼容的原始编码如 wav 为本规范要求的 flac/wv
+
+        c. 非完整专辑，如：
+
+          * 未完整购买并放流所有曲目的的网络数字专辑
+          * 未完整放流所有曲目的实体专辑
+
+        d. 所有曲目均存在官方无损发行的任何无损编码发行，但：
+
+          * 如果存在曲目有且只有官方有损发行，完整收录该有损专辑
+
+        e. 从有损编码转码为无损编码的假冒无损专辑
+        f. 从 SACD/Hi-Res 降采样转码得到的 CD/Hi-Res 规格专辑
+        g. 任何 SACD (DSD/DXD) 格式资源
+        h. 包含相关曲目的其它专辑 (如歌手个人专辑)，但：
+
+          * 如果存在曲目只收录于该专辑，完整收录该专辑
+
+        i. 同系列但属于另一季度或剧场版的专辑 (不跨季收录)
+        j. 衍生游戏、真人影剧、漫画特典、杂志特典、同人创作的专辑 (降低体积)
 
     5. 转载规范：
 
-        1. (通用规则) 当找到任何专辑放流，首先根据该平台和该放流者的转载要求执行。如没有任何说明，视作可以直接转载。如遇到类似于*未授权禁转*时，可以联系放流者转载授权 (不强求)，但需要与放流者约定好转载规则，具体包括以下两点：
+        1. (通用规则) 当找到任何放流的专辑，首先根据该平台和该放流者的转载要求执行。如没有任何说明，视作可以直接转载。如遇到类似于*未授权禁转*时，可以联系放流者转载授权 (不强求)，但需要与放流者约定好转载规则，具体包括以下两点：
 
             a. 来源标注：
 
-              * 在种子发布页注明来源和放流者ID，且在种子内添加`转载声明` (也是TSDM默认)
+              * 在种子发布页注明来源和放流者ID，且在种子内添加[`转载声明`](#转载声明) (也是TSDM默认)
               * 在种子发布页注明来源和放流者ID，不在种子内添加标注 (默认)
               * 不进行任何标注
 
@@ -289,11 +309,11 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
         2. (TSDM单独规则部分) 转载来自 [TSDM论坛](https://www.tsdm39.net/forum.php?gid=451) 的专辑，根据我们已达成的转载协议执行，具体如下：
 
-            a. TSDM 放流的专辑，包括[合购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=503)和[首发偷跑区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=356)，默认允许转载。转载时需要在对应 `CD` 目录下增加`TSDM论坛放流转载声明`。
+            a. 由 TSDM 出资或论坛项目或以部分特殊名目放流的专辑，如分享者谢礼、合购、首发、偷跑等，典型分区包括且不限于[合购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=503)和[首发偷跑区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=356)，默认允许转载。转载时需在对应 `CD` 目录下增加 `TSDM论坛放流转载声明`。
 
-            b. 个人在 TSDM 放流的专辑，包括[自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=417)和[Hi-Res自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=419):
+            b. 由个人自购自抓在 TSDM 放流的专辑，典型分区包括且不限于[自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=417)、[Hi-Res自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=419)、[动漫音乐大区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=247)、[JPOP大区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=452):
 
-              * 如放流者如自订转载规则，按其规则执行。
+              * 如放流者自订转载规则，按其规则执行。
               * 如放流者未指定转载规则，转载时在对应`CD`目录下增加`TSDM个人放流转载声明`。
 
 3. 文件规范
@@ -316,7 +336,7 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
     4. 转载声明文本，仅当放流源要求时携带，分为三种：
 
-       a. 通用`转载声明`模板，适用于转载 TSDM 之外资源的情况：
+       a. 通用 [`转载声明`](转载声明) 模板，适用于转载 TSDM 之外资源的情况：
 
          * 文件名：
            * `{放流者}@{放流平台}.txt` (默认) 如 `Amefs@U2.txt`
@@ -399,9 +419,10 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
         1. 封面图是该 CD 封面或蓝光对应卷的封面
             * 一律采用 JPG 格式，体积不宜超过 1MB，尺寸不宜超过 1600x1600 像素
-            * 文件名统一使用 `Cover.jpg`
-            * 若 Hi-Res 资源已内嵌封面图，则不要另外添加封面图文件
-            * 允许不带封面图和扫图，但原则上尽量保留
+            * 只当音频为整轨时使用独立封面图文件，文件名一律使用 `Cover.jpg`
+            * 当音频为分轨时不使用独立封面图文件，封面图一律内嵌入音频文件
+            * 无论何时封面图都不强制携带，但原则上如有最好保留，尤其是放流源分轨内置的封面图最好不予删除
+            * CD 多版本曲目相同去冗后只留下一个版本时，随意保留一个封面其余删掉，优先保留对应于保留版本的封面图
 
         2. CD 扫图文件规范见 扫图 部分
 
@@ -425,36 +446,36 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
     CUE | ~/CDs/CD/`CATALOG`.cue  | 随对应音频放在同一目录
     LOG | ~/CDs/CD/`CATALOG`.log  | 随对应音频放在同一目录
     转载声明 | ~/CDs/CD/`转载声明`.txt | 随对应音频放在同一目录 文件名规范见上一节
-    封面 | ~/CDs/`CD`/Cover.jpg | 随对应音频放在同一目录 <br> 多个版本时留一个即可
+    封面 | ~/CDs/`CD`/Cover.jpg | 随对应音频放在同一目录
     MV Rip | ~/CDs/CD/`CATALOG`.mkv  | 随对应音频放在同一目录 <br> **注意特典碟 `CATALOG` 与 CD 碟不一样**
     扫图 | 唯一版本: \~/CDs/CD/Scans/`PICNUM`.ext <br> 多版本方式一：\~/CDs/CD/Scans/`CATALOG_PICNUM`.ext <br> 多版本方式二: \~/CDs/CD/Scans/`CATALOG`/`PICNUM`.ext | `PIC_NUM` 是图片序号 如 01, 02, 03... <br> 有多版本扫图时，命名可以添加 `CATALOG` 作区分 (用 – 或 _ 作分隔都可以)，也可以以 `CATALOG` 建立子目录 <br> 注意有特典碟的 CD 其 CATALOG 此时形如 SECL-2209~10
 
-5. `CD` = **专辑名** 命名规则
+5. `CD` = **专辑名** 命名规则 (**留意命名中空格的地方**)
 
     类型 | 命名
     --- | ---
     **BD/DVD 特典随卷专辑** |
-    可能是任何内容 <br> **原则上在任何时候都 <br> 不要在命名里添加番剧名称** | [`YYMMDD`] SPCD／`ARTISTS` (`FORMAT`) <br> [`YYMMDD`] SPCD `NUM`／`ARTISTS` (`FORMAT`) <br> [`YYMMDD`] SPCD `CONTENT`／`ARTISTS` (`FORMAT`) <br> [`YYMMDD`] SPCD `NUM` `CONTENT`／`ARTISTS` (`FORMAT`)
+    可能是任何内容 <br> **原则上在任何时候都不要在命名里添加番剧名称** | [`YYMMDD`] SPCD／`ARTISTS` (`FORMAT`) <br> [`YYMMDD`] SPCD `NUM`／`ARTISTS` (`FORMAT`) <br> [`YYMMDD`] SPCD `CONTENT`／`ARTISTS` (`FORMAT`) <br> [`YYMMDD`] SPCD `NUM` `CONTENT`／`ARTISTS` (`FORMAT`)
     **CD 音质实体或数字单行专辑** |
     主题歌 SINGLE (OP/ED 等) <br> 歌名就是专辑名 | [`YYMMDD`] ｢`TITLE`｣／`ARTISTS` (`FORMAT`) <br> [`YYMMDD`] `CONTENT`／`ARTISTS` (`FORMAT`) |
     原声/角色歌/广播/声剧等 <br> 形如“内容类型+独有专辑名” <br> 自订是否使用 ｢｣ | [`YYMMDD`] `CONTENT`／`ARTISTS` (`FORMAT`) <br> [`YYMMDD`] `CONTENT` `TITLE`／`ARTISTS` (`FORMAT`) <br> [`YYMMDD`] `CONTENT` ｢`TITLE`｣／`ARTISTS` (`FORMAT`)
     **Hi-Res 实体或数字单行专辑** |
     增加位深和频率的标识 | [`YYMMDD`] ｢`TITLE`｣／`ARTISTS` [`DEPTH`\_`FREQ`] (`FORMAT`) <br> [`YYMMDD`] `CONTENT`／`ARTISTS` [`DEPTH`\_`FREQ`] (`FORMAT`)
 
-    `YYMMDD` 是 发售日期 \
-    `NUM` 是对应的 BD/DVD 卷号，只有一个时可以不写 \
-    `CONTENT` 是专辑内容 \
-    `FORMAT` 是 **音频编码格式+扫图格式**，具体见例子 \
-    `TITLE` 是专辑名称 \
-    `ARTISTS` 是艺术家/歌手 \
-    `DEPTH` = 16bit / 24bit … \
-    `FREQ` = 48kHz / 96kHz / 192kHz …
-
-    * 注意所有的日文括号都使用 `｢｣` 而不再使用全角 `「」`
-    * 所有专辑都可以不写歌手
-    * 如果 `ARTISTS` 太多即 Various Artists/VA，一律不写
-    * 角色歌时只写角色名即可，不用写 CV，或者直接不写
-    * 命名中注意空格的地方
+    * `YYMMDD` = 发售年月日
+    * `TITLE` = 专辑名称
+      * 注意所有的日文括号都使用 `｢｣` 而不再使用全角 `「」`
+    * `CONTENT` = 专辑内容说明
+    * `NUM` = 对应的 BD/DVD 卷号，只有一个时可以不写
+    * `ARTISTS` = 艺人名 (可选)，即所有专辑都可以不写歌手，并推荐不写
+        * 如果 `ARTISTS` 太多即 Various Artists / VA，一律不写
+        * 角色歌时只写角色名即可，不用写 CV，或者直接不写
+    * `FORMAT` = `音频格式`+`扫图格式`
+      * 只有音频 `flac/wv`
+      * 音频和一种扫图格式：`flac/wv`+`webp/jpg`
+      * 音频和二种扫图格式：`flac/wv`+`webp`+`jpg`
+    * `DEPTH` = `16bit` / `24bit` / `32bit`
+    * `FREQ` = `48kHz` / `96kHz` / `192kHz`
 
 ***
 
@@ -531,3 +552,15 @@ CD 扫图文件 | ~/CDs/`CD`/Scans/xxxx.ext <br> ~/CDs/`CD`/Scans/`CATALOG`/xxxx
 
 2. 一般情况下通过 度盘/GD 将整理成品传递给复查。如果遇到分享失败的情况，使用 `HashRenamer` 重新命名并上传。如果遇到特定被彻底拉黑的文件，将该文件使用 WinRAR 打包并加密文件名，同时带上 5% 的恢复记录。复查修订后，记得同步修改度盘链接中的文件和种子。\
    如果你与复查/总监的网络状况都较好，也可以直接做种传递成品。
+
+## Changelog
+
+* 2022-03-06
+  1. 字体包不再接受 rar 格式
+  2. 独立封面文件 (Cover.jpg) 当且仅当专辑为整轨时使用，专辑音频为分轨时则只使用内嵌封面图
+  3. 当且仅当专辑不存在低于等于 24-bit 192kHz 放流时，现在允许收录至多 32-bit 384kHz 的 Hi-Res 的资源
+
+* 2022-03-05
+  1. 整合 dev 分支改动
+  2. 更新专辑转载规范，尤其是转载TSDM专辑的要求
+  3. 增加不再保证专辑和扫图尽力收录的描述
