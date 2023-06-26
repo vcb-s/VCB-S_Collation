@@ -322,9 +322,9 @@
             - 禁止第三方将专辑拆离 BDRip 再行转载 (也是TSDM默认)
             - 允许第三放转载，再行转载时必须注明原始来源 (默认)
             - 允许第三方转载，且不做任何限制
-      3. (TSDM单独规则部分) 转载来自 [TSDM论坛](https://www.tsdm39.net/forum.php?gid=451) 的专辑，根据我们已达成的转载协议执行，具体如下：
-            - 由 TSDM 出资或论坛项目或以部分特殊名目放流的专辑，如分享者谢礼、合购、首发、偷跑等，典型分区包括且不限于[合购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=503)和[首发偷跑区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=356)，默认允许转载。转载时需在对应专辑目录下增加 `TSDM论坛放流转载声明`。
-            - 由个人自购自抓在 TSDM 放流的专辑，典型分区包括且不限于[自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=417)、[Hi-Res自购区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=419)、[动漫音乐大区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=247)、[JPOP大区](https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=452):
+      3. (TSDM单独规则部分) 转载来自 [TSDM论坛](https://www.tsdm39.com/forum.php?gid=451) 的专辑，根据我们已达成的转载协议执行，具体如下：
+            - 由 TSDM 出资或论坛项目或以部分特殊名目放流的专辑，如分享者谢礼、合购、首发、偷跑等，典型分区包括且不限于[合购区](https://www.tsdm39.com/forum.php?mod=forumdisplay&fid=503)和[首发偷跑区](https://www.tsdm39.com/forum.php?mod=forumdisplay&fid=356)，默认允许转载。转载时需在对应专辑目录下增加 `TSDM论坛放流转载声明`。
+            - 由个人自购自抓在 TSDM 放流的专辑，典型分区包括且不限于[自购区](https://www.tsdm39.com/forum.php?mod=forumdisplay&fid=417)、[Hi-Res自购区](https://www.tsdm39.com/forum.php?mod=forumdisplay&fid=419)、[动漫音乐大区](https://www.tsdm39.com/forum.php?mod=forumdisplay&fid=247)、[JPOP大区](https://www.tsdm39.com/forum.php?mod=forumdisplay&fid=452):
               - 如放流者自订转载规则，按其规则执行。
               - 如放流者未指定转载规则，转载时在对应专辑目录下增加`TSDM个人放流转载声明`。
                 - 如果已经存在 `TSDM论坛放流转载声明`，文本内容与之合并。
@@ -405,11 +405,11 @@
 
             天使动漫自购音乐区链接：
             Link to TSDM's self-purchased music forum:
-            https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=247
+            https://www.tsdm39.com/forum.php?mod=forumdisplay&fid=247
 
             自购支援规则（无损音质 + BK 扫图，新老 CD 皆可）：
             Rules of joining self-purchased music forum:
-            https://www.tsdm39.net/forum.php?mod=viewthread&tid=841501
+            https://www.tsdm39.com/forum.php?mod=viewthread&tid=841501
             ```
 
       3. `TSDM个人放流转载声明`模板：
@@ -431,11 +431,11 @@
 
             天使动漫自购音乐区链接：
             Link to TSDM's self-purchased music forum:
-            https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=247
+            https://www.tsdm39.com/forum.php?mod=forumdisplay&fid=247
 
             自购支援规则（无损音质 + BK 扫图，新老 CD 皆可）：
             Rules of joining self-purchased music forum:
-            https://www.tsdm39.net/forum.php?mod=viewthread&tid=841501
+            https://www.tsdm39.com/forum.php?mod=viewthread&tid=841501
 
             [原贴链接，可选]
             ```
@@ -456,11 +456,11 @@
 
             天使动漫自购音乐区链接：
             Link to TSDM's self-purchased music forum:
-            https://www.tsdm39.net/forum.php?mod=forumdisplay&fid=247
+            https://www.tsdm39.com/forum.php?mod=forumdisplay&fid=247
 
             自购支援规则（无损音质 + BK 扫图，新老 CD 皆可）：
             Rules of joining self-purchased music forum:
-            https://www.tsdm39.net/forum.php?mod=viewthread&tid=841501
+            https://www.tsdm39.com/forum.php?mod=viewthread&tid=841501
 
             Thanks to {放流者}
             [原贴链接，可选]
