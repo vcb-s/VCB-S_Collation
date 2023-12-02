@@ -74,7 +74,7 @@
 [VCB-Studio] Sangatsu no Lion [Shougi Kyoushitsu 04][Ma10p_1080p][x265_flac].mkv | 成系列，多词时空格分开
 [VCB-Studio] Re：Zero kara Hajimeru Isekai Seikatsu [SP02_10][Ma10p_1080p][x265_flac].mkv | 成系列，另一种做法
 [VCB-Studio] Puella Magi Madoka Magica the Movie Rebellion [Introduction][Ma10p_1080p][x265_flac].mkv |
-[VCB-Studio] AYA UCHIDA Complete LIVE ~COLORS~ in Nippon Budokan [Making][Ma10p_1080p][x265_aac].mkv |
+[VCB-Studio] AYA UCHIDA Complete LIVE \~COLORS\~ in Nippon Budokan [Making][Ma10p_1080p][x265_aac].mkv |
 **字幕和字体包** |
 [SweetSub&VCB-Studio] Flip Flappers [01][720p][x264_aac][chs].mp4 | 硬嵌字幕的视频
 [Kamigami&VCB-Studio] Kizumonogatari II - Nekketsu Hen [Ma10p_816p][x265_flac].Cht&Jap.ass |
