@@ -2,7 +2,7 @@
 
 ### 配置及使用步骤
 
-1. 从群文件或 [r31](https://r31.3333.moe) 下载 `MediainfoProjectNG_0.1.5.4.zip` 并解压.
+1. 从 [GitHub](https://github.com/vcb-s/MediainfoProjectNg/releases) 或 [r31](https://r31.3333.moe) 下载最新版并解压.
 2. 安装 [Mediainfo](https://mediaarea.net/en/MediaInfo), 并将 Mediainfo 安装目录下的 `Mediainfo.dll` 复制到上一步的文件夹中.
     - MP NG 支持 `0.7.94` 版本及后续版本的 Mediainfo. `0.7.85` 版本下亦可运行, 但会出现某些信息缺失.
     - 建议直接使用当前最新版本的 Mediainfo.

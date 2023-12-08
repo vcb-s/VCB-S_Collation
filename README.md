@@ -30,4 +30,4 @@
 
 ## 教程部分
 
-* WIP
+* [整理组操作指导](./guidance/README.md)
