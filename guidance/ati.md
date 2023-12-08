@@ -3,7 +3,7 @@
 ### 配置及使用步骤
 
 **配置及初始化**
-1. 从群文件或 [r31](https://r31.3333.moe) 下载 `AutoTorrentInspection.v1.0.7.0.zip` 并解压.
+1. 从 [GitHub](https://github.com/vcb-s/auto-torrent-inspection/releases) 或 [r31](https://r31.3333.moe) 下载最新版并解压.
 
 2. 打开 ATI 时若已连网, 则会自动检测更新并询问. 若同意更新则 ATI 会将当前版本的 EXE 文件备份至相同文件夹, 之后重新打开新的 EXE 文件即可.
 
@@ -44,6 +44,7 @@
 | ![](https://placehold.it/15/009933/000000?text=+) 深绿色 | 后缀名与文件头不符       |
 | ![](https://placehold.it/15/0559ae/000000?text=+) 钴蓝色 | CD 文件夹命名与规则不符   |
 | ![](https://placehold.it/15/8b4513/000000?text=+) 深棕色 | LOG 与签名不符          |
+| ![](https://placehold.it/15/cad7ce/000000?text=+) 淡绿色 | 文件为空                |
 
 ### 颜色详解及对应处理方法: 错误信息
 
@@ -66,7 +67,7 @@
 
 **5. ![](https://placehold.it/10/cfd8dc/000000?text=+) 灰白色: 无压缩或编码等级过低的 FLAC**
 - FLAC 格式音频在整理规范中默认以 `LEVEL 8` 进行编码, 较低的编码等级会导致文件码率过大甚至超过未压缩的 WAV 格式 (这是由于 FLAC 中可附加图片作为封面). 这类 FLAC 文件会以灰白色底色显示, 在文件夹名后会以百分比形式显示 FLAC 文件体积与未压缩体积的比率.
-- 使用编码器为 libFLAC `1.3.3` 的工具 (如 foobar2000 free encoder pack, CUETools, XLD) 进行重编码.
+- 使用编码器为 libFLAC 的工具 (如 foobar2000 free encoder pack, CUETools, XLD) 进行重编码.
 
 **6. ![](https://placehold.it/10/009933/000000?text=+) 深绿色: 后缀名与文件头不符**
 - ATI 会检查文件头魔数, 与文件后缀对应的魔数进行对比, 若不符则文件底色为深绿色. ATI 可检查的后缀名如下:
@@ -83,3 +84,7 @@
 **8. ![](https://placehold.it/10/8b4513/000000?text=+) 深棕色: LOG 与签名不符**
 - ATI 会检查 CD LOG 文件与其中的签名是否对应, 以判断该 LOG 是否经过人为修改.
 - 注意: 这一功能目前存在未知问题, 且如果遇到修改的 LOG 文件时亦无补救措施, 所以这一报错可忽略.
+
+**9. ![](https://placehold.it/10/cad7ce/000000?text=+) 淡绿色: 文件为空**
+- ATI 会检查文件大小，判断是否为 0B 的空文件.
+- 在使用 XnViewMP 将扫图转为 webp 时，如果图像尺寸超过 webp 限制的 16383px 且没有正确配置缩放就会产生 0B 的输出文件.
