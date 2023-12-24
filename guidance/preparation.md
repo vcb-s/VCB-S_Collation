@@ -17,7 +17,7 @@
 
     ![qaac](https://img.2222.moe/images/2018/07/31/qaac.png)
 
-9.  安装 [XnViewMP 64-bit](https://www.xnview.com/en/xnviewmp/#downloads)，并按教程配置好转换 webp 的相关设置
+9.  安装 [XnViewMP 64-bit](https://www.xnview.com/en/xnviewmp/#downloads)，并按 [教程](./xnviewmp.md) 配置好转换 webp 的相关设置
 10. 从 [GitHub](https://github.com/vcb-s/MediainfoProjectNg/releases) 或 [r31](https://r31.3333.moe) 下载最新版 `Mediainfo Project NG`
 11. 从 [GitHub](https://github.com/vcb-s/auto-torrent-inspection/releases) 或 [r31](https://r31.3333.moe) 下载最新版 `Auto Torrent Inspection`
 12. 安装 [RapidCRC-Unicode](https://www.ov2.eu/programs/rapidcrc-unicode)
