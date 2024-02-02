@@ -3,8 +3,9 @@
 1. 安装 [7-Zip](https://www.7-zip.org/) (23.00 及以上版本)
 2. 下载 `OKEGui portable` 工具包，从 [GitHub](https://github.com/AmusementClub/tools/releases/latest) 或 [r31](https://r31.3333.moe) 下载 `OKEGui_portable_xxxxx-x.x.x_cpu.7z` 并解压，确认 `OKEGui\tools\` 目录下的工具
 3. 安装并正确配置主站所推荐的播放器中任意一项（`PotPlayer`、`MPC-BE`、`mpv` 或 `IINA`），使用 `macOS` 播放时请注意关闭硬件解码
-4. 安装 [MediaInfo](https://mediaarea.net/zh-CN/MediaInfo/Download/Windows)，并按如下配置
-    ![](https://raw.githubusercontent.com/vcb-s/guides/master/Basics/%5B02%5D%20%E4%B8%80%E5%88%87%E7%9A%84%E8%B5%B7%E7%82%B9%E2%80%94%E2%80%94%E8%AE%A4%E8%AF%86BD/media/image01.png)
+4. 安装 [MediaInfo](https://mediaarea.net/zh-CN/MediaInfo/Download/Windows)，并按如下配置  
+
+    ![MediaInfo](https://raw.githubusercontent.com/vcb-s/guides/master/Basics/%5B02%5D%20%E4%B8%80%E5%88%87%E7%9A%84%E8%B5%B7%E7%82%B9%E2%80%94%E2%80%94%E8%AE%A4%E8%AF%86BD/media/image01.png)
 
 5. 安装 [MKVToolNix](https://mkvtoolnix.download/downloads.html#windows) + [gMKVExtractGUI](https://sourceforge.net/projects/gmkvextractgui/) 并设置好后者找到前者的路径  
     为了统一版本，建议使用 OKEGui portable 中附带的 MKVToolNix
