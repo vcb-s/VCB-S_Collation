@@ -11,12 +11,7 @@
     为了统一版本，建议使用 OKEGui portable 中附带的 MKVToolNix
 6. 安装 [L-SMASH Muxer GUI 2](https://github.com/amefs/lsmash-muxer-gui)
 7. 安装 [ChapterTool](https://github.com/tautcony/ChapterTool/releases/latest)
-8. 安装 [Foobar2000](http://www.foobar2000.org/download)，并装好 [free encoders](http://www.foobar2000.org/encoderpack) + [AC3 decoder](http://www.foobar2000.org/components/view/foo_ac3) + [DTS decoder](http://www.foobar2000.org/components/view/foo_input_dts) + [APE decoder](http://www.foobar2000.org/components/view/foo_input_monkey) + [TAK decoder](http://www.foobar2000.org/components/view/foo_input_tak) + [TTA decoder](http://www.foobar2000.org/components/view/foo_input_tta)  
-    安装 QAAC，建议直接使用 OKEGui portable 中附带的版本  
-    FLAC 参数设为 `Level 8`  
-    QAAC 参数设为 `-i -s -q 2 -v 192 --no-delay -o %d -`
-
-    ![qaac](https://img.2222.moe/images/2018/07/31/qaac.png)
+8. 安装 [foobar2000](https://www.foobar2000.org/download)，并按 [教程](./foobar2000.md) 配置好相关设置
 
 9.  安装 [XnViewMP 64-bit](https://www.xnview.com/en/xnviewmp/#downloads)，并按 [教程](./xnviewmp.md) 配置好转换 webp 的相关设置
 10. 从 [GitHub](https://github.com/vcb-s/MediainfoProjectNg/releases) 或 [r31](https://r31.3333.moe) 下载最新版 `Mediainfo Project NG`
@@ -31,5 +26,5 @@
 17. 收藏网站 [VideoHelp](https://www.videohelp.com/software)
 18. 安装 [Python 3](https://www.python.org/downloads/) (3.10 及以上版本)，建议直接使用 OKEGui portable 中附带的版本
 19. 安装 [CUETools](http://cue.tools/wiki/CUETools_Download)
-20. 安装 [Spek](http://spek.cc/)
+20. 安装 [Spek](https://www.spek.cc/p/download)
 21. 安装 [VS Code](https://code.visualstudio.com/)
