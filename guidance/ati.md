@@ -39,48 +39,48 @@
 
 | 颜色                                                     | 信息                   |
 | ------------------------------------------------------- | ----------------------|
-| ![](https://placehold.it/15/92aaf3/000000?text=+) 浅蓝色 | 符合命名规则或后缀的文件  |
-| ![](https://placehold.it/15/fb9966/000000?text=+) 浅橙色 | 不符合命名规则或后缀的文件 |
-| ![](https://placehold.it/15/ff6538/000000?text=+) 深橙色 | CUE 与文件不匹配         |
-| ![](https://placehold.it/15/51559b/000000?text=+) 蓝紫色 | 非 UTF-8 编码的 CUE     |
-| ![](https://placehold.it/15/ff0a32/000000?text=+) 洋红色 | 过长的路径名             |
-| ![](https://placehold.it/15/cfd8dc/000000?text=+) 灰白色 | 无压缩的 FLAC           |
-| ![](https://placehold.it/15/fbbc05/000000?text=+) 明黄色 | 无 BOM 的 UTF-8        |
-| ![](https://placehold.it/15/009933/000000?text=+) 深绿色 | 后缀名与文件头不符       |
-| ![](https://placehold.it/15/0559ae/000000?text=+) 钴蓝色 | CD 文件夹命名与规则不符   |
-| ![](https://placehold.it/15/8b4513/000000?text=+) 深棕色 | LOG 与签名不符          |
-| ![](https://placehold.it/15/2e373b/000000?text=+) 青灰色 | 存在合并字符            |
-| ![](https://placehold.it/15/cad7ce/000000?text=+) 淡绿色 | 文件为空                |
+| ![](https://place-hold.it/15/92aaf3/000000?text=+) 浅蓝色 | 符合命名规则或后缀的文件  |
+| ![](https://place-hold.it/15/fb9966/000000?text=+) 浅橙色 | 不符合命名规则或后缀的文件 |
+| ![](https://place-hold.it/15/ff6538/000000?text=+) 深橙色 | CUE 与文件不匹配         |
+| ![](https://place-hold.it/15/51559b/000000?text=+) 蓝紫色 | 非 UTF-8 编码的 CUE     |
+| ![](https://place-hold.it/15/ff0a32/000000?text=+) 洋红色 | 过长的路径名             |
+| ![](https://place-hold.it/15/cfd8dc/000000?text=+) 灰白色 | 无压缩的 FLAC           |
+| ![](https://place-hold.it/15/fbbc05/000000?text=+) 明黄色 | 无 BOM 的 UTF-8        |
+| ![](https://place-hold.it/15/009933/000000?text=+) 深绿色 | 后缀名与文件头不符       |
+| ![](https://place-hold.it/15/0559ae/000000?text=+) 钴蓝色 | CD 文件夹命名与规则不符   |
+| ![](https://place-hold.it/15/8b4513/000000?text=+) 深棕色 | LOG 与签名不符          |
+| ![](https://place-hold.it/15/2e373b/000000?text=+) 青灰色 | 存在合并字符            |
+| ![](https://place-hold.it/15/cad7ce/000000?text=+) 淡绿色 | 文件为空                |
 
 ### 颜色详解及对应处理方法: 错误信息
 
 这一部分介绍 ATI 中会出现的报错, 这些报错往往意味着整理成品中可能存在命名错误、CUE 格式错误或其他整理错误, 往往需要手动修复.
 
-**1. ![](https://placehold.it/10/fb9966/000000?text=+) 浅橙色: 不符合命名规则或后缀的文件**
+**1. ![](https://place-hold.it/10/fb9966/000000?text=+) 浅橙色: 不符合命名规则或后缀的文件**
 
 - ATI 会检查视频、音频、图片的命名格式是否符合整理标准. 如符合标准则底色为浅蓝色 (默认不显示, 勾选显示全部后显示), 不符合标准则底色为浅橙色.
 
-**2. ![](https://placehold.it/10/ff6538/000000?text=+) 深橙色: CUE 与文件不匹配**
+**2. ![](https://place-hold.it/10/ff6538/000000?text=+) 深橙色: CUE 与文件不匹配**
 
 - ATI 会检查所有 CD 文件夹下 CUE 文件的 `FILE` 字段并尝试与同文件夹下的音频文件匹配, 若无法匹配到所指向的文件则 CUE 文件底色为深橙色.
 - 勾选左下角的 `修复 CUE` 可修复**文件名相同**但**扩展名不同**的 `FILE` 字段.
 
-**3. ![](https://placehold.it/10/51559b/000000?text=+) 蓝紫色: 非 UTF-8 编码的 CUE 文件 / ![](https://placehold.it/10/fbbc05/000000?text=+) 明黄色: 无 BOM 的 UTF-8 编码的 CUE 文件**
+**3. ![](https://place-hold.it/10/51559b/000000?text=+) 蓝紫色: 非 UTF-8 编码的 CUE 文件 / ![](https://place-hold.it/10/fbbc05/000000?text=+) 明黄色: 无 BOM 的 UTF-8 编码的 CUE 文件**
 
 - ATI 使用 [Ude](https://github.com/errepi/ude) 检测 CUE 文件的编码格式. 如与整理规范 (UTF-8 with BOM) 不符则 CUE 文件底色蓝紫色或明黄色.
 - 使用文本编辑器修改编码格式即可.
 
-**4. ![](https://placehold.it/10/ff0a32/000000?text=+) 洋红色: 过长的路径名**
+**4. ![](https://place-hold.it/10/ff0a32/000000?text=+) 洋红色: 过长的路径名**
 
 - Windows 系统中, 默认路径长度限制为 256 个字符. 超过这一限制的路径名 (以文件夹放在磁盘根目录开始计算) 的文件会以洋红色底色显示.
 - 使用简写以压缩路径名.
 
-**5. ![](https://placehold.it/10/cfd8dc/000000?text=+) 灰白色: 无压缩或编码等级过低的 FLAC**
+**5. ![](https://place-hold.it/10/cfd8dc/000000?text=+) 灰白色: 无压缩或编码等级过低的 FLAC**
 
 - FLAC 格式音频在整理规范中默认以 `LEVEL 8` 进行编码, 较低的编码等级会导致文件码率过大甚至超过未压缩的 WAV 格式 (这是由于 FLAC 中可附加图片作为封面). 这类 FLAC 文件会以灰白色底色显示, 在文件夹名后会以百分比形式显示 FLAC 文件体积与未压缩体积的比率.
 - 使用编码器为 libFLAC 的工具 (如 foobar2000 free encoder pack, CUETools, XLD) 进行重编码.
 
-**6. ![](https://placehold.it/10/009933/000000?text=+) 深绿色: 后缀名与文件头不符**
+**6. ![](https://place-hold.it/10/009933/000000?text=+) 深绿色: 后缀名与文件头不符**
 
 - ATI 会检查文件头魔数, 与文件后缀对应的魔数进行对比, 若不符则文件底色为深绿色. ATI 可检查的后缀名如下:
   - 音频格式: .mp3, .flac, .m4a, .aac, .tak
@@ -89,22 +89,22 @@
   - 流封装格式: .mkv, .mka, .mp4
   - 图片格式: .webp, .png, .jpg, .jpeg, .jp2, .j2c
 
-**7. ![](https://placehold.it/10/0559ae/000000?text=+) 钴蓝色: CD 文件夹命名与规则不符**
+**7. ![](https://place-hold.it/10/0559ae/000000?text=+) 钴蓝色: CD 文件夹命名与规则不符**
 
 - ATI 会检查 CD 文件夹命名格式. 
 - 注意: 这一功能目前存在已知问题, 需要更新正则表达式以适应新的命名规则. 常见错判是当**专辑名**中存在 `／` (因为这一符号也被用作专辑名与艺人名的分隔线) 时, 会提示命名错误. 所以当显示钴蓝色时请结合规范自主判断是否错误命名.
 
-**8. ![](https://placehold.it/10/8b4513/000000?text=+) 深棕色: LOG 与签名不符**
+**8. ![](https://place-hold.it/10/8b4513/000000?text=+) 深棕色: LOG 与签名不符**
 
 - ATI 会检查 CD LOG 文件与其中的签名是否对应, 以判断该 LOG 是否经过人为修改.
 - 注意: 这一功能目前存在未知问题, 且如果遇到修改的 LOG 文件时亦无补救措施, 所以这一报错可忽略.
 
-**9. ![](https://placehold.it/10/2e373b/000000?text=+) 青灰色: 存在合并字符**
+**9. ![](https://place-hold.it/10/2e373b/000000?text=+) 青灰色: 存在合并字符**
 
 - ATI 会检查文件名称中的字符编码, 某些字符可能看起来是一个字, 实际编码占用了两个字符, 系统中会自动合并显示; 这种情况下要重新输入字符来修复.
 - 例: `で` 和 `で`, 二者看起来一样, 实际的编码分别是 `\u3066\u3099` 和 `\u3067`, 前者便是合并字符, 需要改为后者.
 
-**10. ![](https://placehold.it/10/cad7ce/000000?text=+) 淡绿色: 文件为空**
+**10. ![](https://place-hold.it/10/cad7ce/000000?text=+) 淡绿色: 文件为空**
 
 - ATI 会检查文件大小, 判断是否为 0B 的空文件.
 - 在使用 XnViewMP 将扫图转为 webp 时, 如果图像尺寸超过 webp 限制的 16383px 且没有正确配置缩放就会产生 0B 的输出文件.
