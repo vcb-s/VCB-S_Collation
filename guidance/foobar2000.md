@@ -1,4 +1,18 @@
-# 便携版 foobar2000 安装 / 转码 / 编辑 Metadata 教程
+# 便携版 foobar2000 安装 / 转码 / 使用 教程
+
+- [安装 foobar2000 和相关编解码组件](#安装-foobar2000-和相关编解码组件)
+  * [可选安装额外解码器](#可选安装额外解码器)
+- [转码配置](#转码配置)
+  * [配置 FLAC 预设](#配置-flac-预设)
+  * [配置 WavPack 预设](#配置-wavpack-预设)
+  * [配置 AAC 预设](#配置-aac-预设)
+  * [预设汇总](#预设汇总)
+- [使用方法](#使用方法)
+  * [编辑 Metadata](#编辑-metadata)
+  * [比较音轨](#比较音轨)
+  * [移除内嵌播放列表](#移除内嵌播放列表)
+  * [TAK 解码](#TAK-解码)
+
 
 ## 安装 foobar2000 和相关编解码组件
 
@@ -118,15 +132,16 @@ foobar2000 v2.0 以上版本原生支持以下格式的解码:  `WAV(PCM)`/`FLAC
 
 2. 需要转码时, 右键打开菜单, 选择 [`Convert`] 后点击对应预设即可完成转码
 
+## 使用方法
 
-## 编辑 Metadata
+### 编辑 Metadata
 
 1. 在 foobar2000 中选中想要编辑 Metadata 的曲目 (可以多选), 然后右键打开菜单, 点击 [`Properties`]
 
     ![](./media/foobar2000_21.png)
 
 2. 进入 Properties 界面, 各行可以用鼠标拖曳多选, 也可以按住 shift 或者 ctrl 进行多选  
-    Comment 及后续行是整理中分轨不需要的多余信息, 选中后按 delete 就可以一键删除  
+    Comment 及后续行是整理中分轨以及整轨 cue 不需要的多余信息, 选中后按 delete 就可以一键删除  
     对于整轨文件, 需要保证此界面内没有任何数据, 全部选中后 delete 即可
 
     ![](./media/foobar2000_22.png)
@@ -135,11 +150,13 @@ foobar2000 v2.0 以上版本原生支持以下格式的解码:  `WAV(PCM)`/`FLAC
 
     ![](./media/foobar2000_23.png)
 
-4. 如果想在多选曲目的同时, 单独修改某一曲目的特定 field, 可以双击左侧 Name 列对应 field, 进入单独的 field 编辑界面, 编辑好之后点 `OK` 退出
+4. 如果想在多选曲目的同时, 单独修改某一曲目的特定 field, 可以双击左侧 Name 列对应 field, 进入单独的 field 编辑界面, 编辑好之后点 `OK` 退出  
+    该窗口可以使用 `Ctrl+A` 全选, `Ctrl+C` 复制所有 Value 中的值, 之后可以粘贴到文本编辑器中进行批量操作; 编辑后的信息同样复制, 在该窗口中 `Ctrl+A` 全选, `Ctrl+V` 粘贴即可完成编辑
 
     ![](./media/foobar2000_24.png)
 
-5. 另外, 点击左下 `Tools` 按钮, 可以看到 `Auto Track Number` (多选曲目时才有), 可以给你选中的曲目自动生成顺序和总曲目数
+5. 另外, 点击左下 `Tools` 按钮, 可以看到 `Auto Track Number` (多选曲目时才有), 可以给你选中的曲目自动生成顺序和总曲目数  
+    当遇到序号补零的情况时 (例如 01, 02...), 最好也要进行该操作以消除多余的 0
 
     ![](./media/foobar2000_25.png)
 
@@ -153,8 +170,42 @@ foobar2000 v2.0 以上版本原生支持以下格式的解码:  `WAV(PCM)`/`FLAC
 
 8. 最后点击 `OK` 保存, 完成编辑
 
-### 备注
+#### 备注
 
 完成编辑后, 建议重新进入 Properties 界面复核 Metadata 修改是否保存成功
 
 部分由 FFmpeg 植入的数据需要经过一次转码后才能编辑删除, 直接编辑原档是删不掉的
+
+### 比较音轨
+
+foobar2000 可以按位去比较两端音频的异同, 方法非常简单: 选择两个音频, 右键 [`Utilities`] > [`Bit-compare tracks...`]  
+一般会有以下几种情况:
+
+- All tracks decoded fine, no differences found.  
+    两个音轨完全相同, 但这并不表明这两个音轨的来源相同
+- Differences found in compared tracks; the tracks became identical after applying offset and truncating first/last samples.  
+    两个音轨在偏移之后完全相同, 表明这两个音轨的来源不同, 一般 CD 和流媒体音源之间会有这种情况
+- Differences found in compared tracks.  
+    两个音轨完全不同
+
+### 移除内嵌播放列表
+
+有时会遇到内嵌播放列表的音频文件, 表现为单独的文件, 拖进 foobar2000 中显示为多个分轨; 对于 FLAC 和 ALAC (m4a) 的处理方法略微有所不同.
+
+1. 安装播放列表导出插件 [foo_cuesheet_creator](https://foobar.hyv.fi/?view=foo_cuesheet_creator)
+
+2. 在设置中确认这几个选项已打开: `Remove embedded cuesheet(s)`, `Strip chapters ...`, `Save as cuesheet`
+
+    ![](./media/foobar2000_27.png)
+
+3. 选择该文件的所有分轨, 右键 [`Utilities`] > [`Save as cuesheet`], 以导出 cue 文件
+
+4. 对于 FLAC 文件, 右键 [`Utilities`] > [`Remove embedded cuesheet(s)`]  
+    对于 ALAC (m4a) 文件 [`Utilities`] > [`Strip chapters ...`]  
+    这是因为 m4a 文件中的播放列表是以章节的形式保存, 所以处理方式有所区别
+
+5. 通过以上步骤可以得到 cue 列表和整轨文件, 正常处理即可, 不要忘记修改 cue 文件中的音频文件名称
+
+### TAK 解码
+
+少数情况下, 会遇到 TAK 编码的音频; 对于使用 TAK1.0 编码音频, 可能会出现无法正常解码 (`Decoding failure`) 的情况, 需要额外安装插件: [foo_input_tak](https://www.foobar2000.org/components/view/foo_input_tak)
