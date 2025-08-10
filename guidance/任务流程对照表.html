@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务流程对照表</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #212529;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        h1, h2 {
+            color: #343a40;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+            vertical-align: middle;
+        }
+        thead th {
+            background-color: #e9ecef;
+            color: #495057;
+            font-weight: 600;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+        tbody tr:hover {
+            background-color: #e2e6ea;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            margin: 0;
+            vertical-align: middle;
+        }
+        .notes {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffeeba;
+            padding: 15px 20px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .notes h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #dee2e6;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>任务流程对照表</h1>
+
+        <h2>一、命名任务流程</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>任务描述</th>
+                    <th>对应文档链接</th>
+                    <th>完成</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>使用 RapidCRC 或者种子校验, 确认文件正确性</td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E6%96%87%E4%BB%B6%E4%BC%A0%E9%80%92%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer">文件传递规范</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>使用 MPNG 检查所有压制成品文件</br>确认视频、音频、章节、原盘字幕语言无误, 确认各轨道格式、默认标记、轨道延迟等无误</td>
+                    <td><div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%8E%8B%E5%88%B6%E6%88%90%E5%93%81%E6%96%87%E4%BB%B6%E8%A7%84%E6%A0%BC.md" target="_blank" rel="noopener noreferrer">压制成品文件规格</a></div>
+                        <div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/guidance/mp_ng.md" target="_blank" rel="noopener noreferrer">MPNG文档</a></div>
+                    </td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>根据对照组和 BD 原盘信息, 确认没有遗漏内容</br>检查原盘里没压的是否是无效内容, 比如 warning、logo 之类</br>如果发现有效内容没压或者有不确定的, 联系总监处理</td>
+                    <td><div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E8%A7%86%E9%A2%91%E5%92%8C%E5%AD%97%E5%B9%95%E6%95%B4%E7%90%86%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer">视频和字幕整理规范</a></div>
+                        <div><a href="https://github.com/vcb-s/guides/tree/master/Basics/%5B02%5D%20%E4%B8%80%E5%88%87%E7%9A%84%E8%B5%B7%E7%82%B9%E2%80%94%E2%80%94%E8%AE%A4%E8%AF%86BD#3-%E6%9C%89%E6%95%88%E5%86%85%E5%AE%B9" target="_blank" rel="noopener noreferrer">有效内容</a></div>
+                    </td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>（可选）使用 diffAudio、diffChapter 检查差异</td>
+                    <td><a href="https://github.com/airium/AfterCollation/tree/main/scripts" target="_blank" rel="noopener noreferrer">脚本仓库地址</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>按照命名规范, 对压制成品进行命名</br>可以使用 VLC 播放器查看 menu 辅助判断, 可以参考对照组命名, 但不要完全照抄对照组名</br>总监可能会提供指导压制任务的文档, 命名可以适当参考, 但不能作为凭据</td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E8%A7%86%E9%A2%91%E5%92%8C%E5%AD%97%E5%B9%95%E6%95%B4%E7%90%86%E8%A7%84%E8%8C%83.md#%E8%A7%86%E9%A2%91%E6%88%90%E5%93%81%E5%91%BD%E5%90%8D%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener noreferrer">视频成品命名</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>（如有合作字幕）检查字幕有无错误</br>删除 Aegisub Project Garbage 区块</br>检查字幕组 staff 名单中“压制”一项是否改为 VCB-Studio 或移除</td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%AD%97%E5%B9%95%E5%92%8C%E5%AD%97%E4%BD%93%E5%8C%85%E6%A3%80%E6%9F%A5%E8%A7%84%E8%8C%83.md#%E5%AD%97%E5%B9%95%E6%A3%80%E6%9F%A5" target="_blank" rel="noopener noreferrer">字幕检查</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>（如有合作字幕）检查字体包有无缺漏, 正确打包字体包</br>FontLoaderSub 与 ListAssFonts 混合检查</td>
+                    <td><div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%AD%97%E5%B9%95%E5%92%8C%E5%AD%97%E4%BD%93%E5%8C%85%E6%A3%80%E6%9F%A5%E8%A7%84%E8%8C%83.md#%E5%AD%97%E4%BD%93%E5%8C%85%E6%A3%80%E6%9F%A5" target="_blank" rel="noopener noreferrer">字体包检查</a></div>
+                        <div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%AD%97%E5%B9%95%E5%92%8C%E5%AD%97%E4%BD%93%E5%8C%85%E6%A3%80%E6%9F%A5%E8%A7%84%E8%8C%83.md#%E5%AD%97%E4%BD%93%E5%8C%85%E6%89%93%E5%8C%85" target="_blank" rel="noopener noreferrer">字体包打包</a></div>
+                    </td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>（如有合作字幕）按照命名规范, 对字幕文件和字体包进行命名</td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E8%A7%86%E9%A2%91%E5%92%8C%E5%AD%97%E5%B9%95%E6%95%B4%E7%90%86%E8%A7%84%E8%8C%83.md#%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D" target="_blank" rel="noopener noreferrer">文件命名</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>正确制种, 保持文件顺序, 非私有种子, Tracker 列表正确</br>种子需要标记版本号</td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%88%B6%E7%A7%8D%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer">制种规范</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>使用 MPNG 与 ATI 检查成品根目录, ATI 还要检查成品种子</td>
+                    <td><div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/guidance/mp_ng.md" target="_blank" rel="noopener noreferrer">MPNG文档</a></div>
+                        <div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/guidance/ati.md" target="_blank" rel="noopener noreferrer">ATI文档</a></div>
+                    </td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>按照提交规范, 上传<b>成品、种子、检查截图、记录</b></td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer">提交规范</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="notes">
+            <h3>注意事项</h3>
+            <ul>
+                <li>一些特殊情况会引起 ATI 和 MPNG 的误报错, 不必强求消除所有报错, 但所有误报的情况必须在记录里进行解释说明</li>
+                <li>对于 OKE 压制的成品文件, 所有除重命名外的改动操作需要告知总监</li>
+                <li>diff 检查对于 OKE 压制的项目为可选, 对于手工压制项目为必选</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>二、周边整理任务流程</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>任务描述</th>
+                    <th>对应文档链接</th>
+                    <th>完成</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>使用种子校验, 确认文件正确性</td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E6%96%87%E4%BB%B6%E4%BC%A0%E9%80%92%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer">文件传递规范</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>（可选）查压制命名成品是否齐全, 检查是否符合命名规范</br>如有错误联系压制或总监进行处理</td>
+                    <td>根据表格一的步骤2、3检查</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>通过包括动画官网、vgmdb 在内的多种消息来源确定相关 CD 的列表</br>尽力收集相关 CD, 注意确认转载权限, 将来源更新至<b>来源列表</b></td>
+                    <td><div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%91%A8%E8%BE%B9%E4%B8%93%E8%BE%91%E6%95%B4%E7%90%86%E8%A7%84%E8%8C%83.md#%E4%B8%93%E8%BE%91%E6%94%B6%E5%BD%95%E8%A7%84%E8%8C%83" target="_blank" rel="noopener noreferrer">专辑收录规范</a></div>
+                        <div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83.md#%E6%95%B4%E7%90%86%E6%8F%90%E4%BA%A4" target="_blank" rel="noopener noreferrer">整理记录</a></div>
+                    </td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>按照规范处理 CD 相关文件, 无损音频均用 FLAC 最高等级压缩转码一遍, 正确处理 metadata</td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%91%A8%E8%BE%B9%E4%B8%93%E8%BE%91%E6%95%B4%E7%90%86%E8%A7%84%E8%8C%83.md#%E4%B8%93%E8%BE%91%E7%A2%9F%E7%89%87%E6%96%87%E4%BB%B6%E8%A7%84%E8%8C%83" target="_blank" rel="noopener noreferrer">专辑碟片文件规范</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>收集 BD、CD 扫图并将无损格式的图片转换为 WEBP 格式, 将来源更新至<b>来源列表</b></td>
+                    <td><div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%91%A8%E8%BE%B9%E6%89%AB%E5%9B%BE%E6%95%B4%E7%90%86%E8%A7%84%E8%8C%83.md#%E6%89%AB%E5%9B%BE%E6%94%B6%E5%BD%95%E8%A7%84%E8%8C%83" target="_blank" rel="noopener noreferrer">扫图收录规范</a></div>
+                        <div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%91%A8%E8%BE%B9%E6%89%AB%E5%9B%BE%E6%95%B4%E7%90%86%E8%A7%84%E8%8C%83.md#%E6%89%AB%E5%9B%BE%E6%96%87%E4%BB%B6%E8%A7%84%E8%8C%83" target="_blank" rel="noopener noreferrer">扫图文件规范</a></div>
+                    </td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>按照命名规范, 对 CD 和扫图成品进行命名</td>
+                    <td><div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%91%A8%E8%BE%B9%E4%B8%93%E8%BE%91%E6%95%B4%E7%90%86%E8%A7%84%E8%8C%83.md#cds-%E4%B8%8B%E4%B8%93%E8%BE%91%E7%9B%AE%E5%BD%95%E5%B8%83%E5%B1%80" target="_blank" rel="noopener noreferrer">CD命名规则</a></div>
+                        <div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%91%A8%E8%BE%B9%E6%89%AB%E5%9B%BE%E6%95%B4%E7%90%86%E8%A7%84%E8%8C%83.md#%E6%89%AB%E5%9B%BE%E7%9B%AE%E5%BD%95%E5%B8%83%E5%B1%80" target="_blank" rel="noopener noreferrer">扫图命名规则</a></div>
+                    </td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>合并压制命名成品, 重新制种</br>种子版本号应在压制命名成品的版本号上追加</td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E5%88%B6%E7%A7%8D%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer">制种规范</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>使用 MPNG 和 ATI 检查成品根目录, ATI 还要检查成品种子</td>
+                    <td><div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/guidance/mp_ng.md" target="_blank" rel="noopener noreferrer">MPNG文档</a></div>
+                        <div><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/guidance/ati.md" target="_blank" rel="noopener noreferrer">ATI文档</a></div>
+                    </td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>将各项资源的来源信息整理总结为可供发布使用的<b>资源来源汇总</b></td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83.md#%E6%95%B4%E7%90%86%E6%8F%90%E4%BA%A4" target="_blank" rel="noopener noreferrer">整理提交规范</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>按照提交规范, 上传<b>成品、种子、检查截图、记录</b></td>
+                    <td><a href="https://github.com/vcb-s/VCB-S_Collation/blob/master/%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer">提交规范</a></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
